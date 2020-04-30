@@ -1,0 +1,38 @@
+.nav_wrap {
+    display: flex;
+    width: 100vw;
+    background-color: #fff;
+    color: #494949;
+    /* position: fixed; */
+    margin: 0rem;
+}
+.item {
+    font-size: 1.4em;
+    padding: 0vw 1vw;
+    color: #000;
+    font-family: 'HelveticaNeueLTPro-Bd',Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+
+}
+.wrap {
+    width: 55vw;
+    height: 70%;
+    display: flex;
+    position: relative;
+    left: 40vw;
+
+}
+.logo_brand {
+width: 10vw;
+height: 70%;
+}
+.logo {
+    font-size: 2.5em;
+    color: #b38f00
+
+    ;
+}
+.logo_label {
+    font-Weight: bold;
+    color: #000;
+}
