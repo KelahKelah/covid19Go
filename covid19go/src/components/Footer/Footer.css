@@ -1,0 +1,43 @@
+.footer_wrap {
+
+}
+.footer_nav {
+    background-color: #252929;
+    color:  #a2a9a9;
+    height: 10vh;
+}
+.footer_item {
+    display: flex;
+    justify-content: center;
+    background-color: #565d5d;
+    color: #f2f3f3;
+    height: 30vh;
+}
+.footer_logo_brand {
+    /* width: 10vw; */
+    height: 50%;
+}
+.footer_logo {
+    font-size: 2.5em;
+    color: #b38f00;
+}
+.footer_logo_label {
+    font-Weight: bold;
+    color: #000;
+}
+ul {
+    display: flex;
+    position: relative;
+    left: 40%;
+    margin: auto;
+    /* justify-content: space-between; */
+    /* padding: 3px; */
+}
+ul i {
+    margin: 0px 10px;
+    font-size: 1.5em;
+}
+span {
+    margin: 10px 30px;
+
+}
