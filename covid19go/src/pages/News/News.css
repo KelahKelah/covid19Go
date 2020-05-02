@@ -9,7 +9,7 @@
     margin: 5px;
     width: 55vw;
 }
-.sidebar_news {
+.NewImage {
     background-color:#fff;
     width: 25vw;
     margin: 5px;
@@ -17,4 +17,11 @@
 }
 i {
     color: #e6b800;
+    /* margin: 5px; */
+}
+a {
+    width: 30px;
+    height: 10px;
+    background-color: #e6b800;
+    ;
 }
