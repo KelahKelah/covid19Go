@@ -9,7 +9,7 @@
 .item {
     font-size: 1.4em;
     padding: 0vw 1vw;
-    color: #000;
+    color: #0d0d0d;
     font-family: 'HelveticaNeueLTPro-Bd',Helvetica Neue,Helvetica,Arial,sans-serif;
     font-weight: bold;
 
@@ -28,11 +28,9 @@ height: 70%;
 }
 .logo {
     font-size: 2.5em;
-    color: #b38f00
-
-    ;
+    color: #b38f00;
 }
 .logo_label {
     font-Weight: bold;
-    color: #000;
+    color: #0d0d0d;
 }

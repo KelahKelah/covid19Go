@@ -19,6 +19,8 @@ const Navigation = () => {
                     </div>
                 </div>
             </BrowserRouter>
+
+            {/* <Footer /> */}
         </>
     )
 

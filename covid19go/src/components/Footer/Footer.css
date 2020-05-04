@@ -1,17 +1,26 @@
 .footer_wrap {
+    width: 100vw;
+    background-color: #565d5d;
+
 
 }
 .footer_nav {
-    background-color: #252929;
+    background-color: #3d4343;
     color:  #a2a9a9;
     height: 10vh;
+    /* width: 80vw; */
+    /* margin: auto; */
+
+
 }
 .footer_item {
     display: flex;
     justify-content: center;
-    background-color: #565d5d;
     color: #f2f3f3;
-    height: 30vh;
+    height: 35vh;
+    width: 80vw;
+    margin: auto;
+    /* padding: 10px 20px; */
 }
 .footer_logo_brand {
     /* width: 10vw; */
@@ -38,6 +47,10 @@ ul i {
     font-size: 1.5em;
 }
 span {
-    margin: 10px 30px;
+    margin:     50px;
+    list-style-type: none; 
 
+}
+span li {
+    margin: 10px;
 }
