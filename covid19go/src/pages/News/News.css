@@ -7,7 +7,8 @@
     display: flex;
     background-color:#fff;
     margin: 5px;
-    width: 55vw;
+    max-width: 55vw;
+    max-width: 60vw;
 }
 .main_news div > h1 {
     display: inline;
@@ -18,9 +19,11 @@ div > h3 {
 }
 .NewImage {
     background-color:#fff;
-    width: 25vw;
+    /* max-width: 25vw; */
+    /* max-height: ; */
     margin: 5px;
-
+    max-width: 55vw;
+    max-width: 60vw;
 }
 span {
     /* color: #e6b800; */

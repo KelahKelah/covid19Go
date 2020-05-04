@@ -4,6 +4,7 @@ import './Home.css';
 // import { baseUrl } from '../../util/apiCall'
 
 const GoogleMapApikey = 'AIzaSyC0Cq0grSLW5T4wMwT8aXIyokN1mYT_XHA'
+const statistics_url = 'https://nigeria-covid-19.p.rapidapi.com/api/confirmed'
 
 const Home = () => {
     const [statistic, setStatistic] = useState({ confirmed:0, discharged:0, death:0 })
@@ -11,41 +12,44 @@ const Home = () => {
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false)
 
-    // useEffect(() => {
-    //         // testing API
-    //     axios.get('https://nigeria-covid-19.p.rapidapi.com/api/confirmed')
-    //     .then(res => {
-    //         setLoading(true)
-    //         setCurrentDate({date: 'myDate'})
-    //         console.log(myDate)
+    useEffect(() => {
+            // testing API
+        axios.get('https://api.apify.com/v2/key-value-stores/Eb694wt67UxjdSGbc/records/LATEST?disableRedirect=true')
+        // https://api.apify.com/v2/key-value-stores/Eb694wt67UxjdSGbc/records/LATEST?disableRedirect=true
+        .then(res => {
+            setLoading(true)
+            setCurrentDate({date: 'myDate'})
+            console.log(myDate)
             
-    //         if(res.status === 200) {
-    //             // setStatistic({confirmed: res.confirmed.count, discharged: res.discharged.count, deaths: res.death.count})
-    //             console.log('Response data', res)
+            if(res.status === 200) {
+                // setStatistic({confirmed: res.confirmed.count, discharged: res.discharged.count, deaths: res.death.count})
+                console.log('Response data', res.data)
 
-    //         }
-    //     })
-    // }, [])
+            }
+        })
+    }, [])
 
-    // let getDate = () => {
-    //     let date = {
-    //         currentDate: new Date()
-    //     } 
+    let getDate = () => {
+        let date = {
+            currentDate: new Date()
+        } 
 
-    // }
+    }
 
     let myDate = new Date().toDateString()
 
-    useEffect(() => {
-        setStatistic({confirmed: 1204, discharged: 324, deaths: 41})
-        setCurrentDate({date: myDate})
-        console.log(myDate)
+   
 
-        // .catch((error) => {
-        //     console.log(error)
-        //     setError(true)
-        // })
-    }, [])
+    // useEffect(() => {
+    //     setStatistic({confirmed: 1204, discharged: 324, deaths: 41})
+    //     setCurrentDate({date: myDate})
+    //     console.log(myDate)
+
+    //     // .catch((error) => {
+    //     //     console.log(error)
+    //     //     setError(true)
+    //     // })
+    // }, [])
     
     
     return(
@@ -69,7 +73,7 @@ const Home = () => {
                     </div>
                     <div className='death'>
                         <label className='death_item'>DEATHS</label>
-                        <p className='death_item'>{statistic.deaths}</p>
+                        <p className='death_item'>{statistic.death}</p>
                     </div>
                 
                 </div>
