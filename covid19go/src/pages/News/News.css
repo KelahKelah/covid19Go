@@ -9,19 +9,31 @@
     margin: 5px;
     width: 55vw;
 }
+.main_news div > h1 {
+    display: inline;
+    color: #e6b800
+}
+div > h3 {
+    color: #737373;
+}
 .NewImage {
     background-color:#fff;
     width: 25vw;
     margin: 5px;
 
 }
-i {
-    color: #e6b800;
+span {
+    /* color: #e6b800; */
+    color:#B6B6B6;
     /* margin: 5px; */
 }
-a {
-    width: 30px;
-    height: 10px;
-    background-color: #e6b800;
-    ;
+.myLink {
+    width: 50px;
+    height: 20px;
+    background-color: #856114;
+    padding: 10px;
+    color: #fff;
+}
+i {
+    color: #e6b800;
 }

@@ -3,6 +3,8 @@ import axios from 'axios';
 import './Home.css';
 // import { baseUrl } from '../../util/apiCall'
 
+const GoogleMapApikey = 'AIzaSyC0Cq0grSLW5T4wMwT8aXIyokN1mYT_XHA'
+
 const Home = () => {
     const [statistic, setStatistic] = useState({ confirmed:0, discharged:0, death:0 })
     const [currentDate, setCurrentDate] = useState({date: ''})
@@ -11,17 +13,19 @@ const Home = () => {
 
     // useEffect(() => {
     //         // testing API
-    //     axios.get('https://www.who.int/feeds/entity/hac/en/rss.xml')
+    //     axios.get('https://nigeria-covid-19.p.rapidapi.com/api/confirmed')
     //     .then(res => {
     //         setLoading(true)
-    //         // if(status === 200) {
-    //         if(true) {
+    //         setCurrentDate({date: 'myDate'})
+    //         console.log(myDate)
+            
+    //         if(res.status === 200) {
     //             // setStatistic({confirmed: res.confirmed.count, discharged: res.discharged.count, deaths: res.death.count})
-    //             console.log('Response data')
+    //             console.log('Response data', res)
 
     //         }
     //     })
-    // })
+    // }, [])
 
     // let getDate = () => {
     //     let date = {
@@ -46,12 +50,12 @@ const Home = () => {
     
     return(
         <div>
-            <div className='home_wrap'>
-                <div className='main_title'>
+            <div className='main_title'>
                     <h1>COVID-19 UPDATE</h1>
-                </div>
-                <div>
-                    <h1 className='title'>NEW CASES CONFIRMED</h1>
+            </div>
+            <div className='home_wrap'>
+                <div className='title'>
+                    <h1>NEW CASES CONFIRMED</h1>
                 </div>
                 <i id='date'>{currentDate.date}</i>
                 <div className='statistic'>
