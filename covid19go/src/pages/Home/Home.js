@@ -70,8 +70,8 @@ const Home = () => {
                     </div>
                     <div className='discharged'>
                         <div className='discharged_item space width-label'>
-                            <div >DISCHARGED</div>
-                        </div >
+                            <div>DISCHARGED</div>
+                        </div>
                         <div className='discharged_item width-count'>
                             <div>{statistic.discharged}</div>
                         </div>
@@ -84,6 +84,11 @@ const Home = () => {
                             <div>{statistic.deaths}</div>
                         </div>
                     </div>
+
+                    {/* <div className="discharged">
+                        <label className="discharged_item">Discharged</label>
+                        <p className="discharged_item">23</p>
+                    </div> */}
 
                 </div>
 

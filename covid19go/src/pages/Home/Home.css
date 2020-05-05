@@ -50,7 +50,6 @@ div div label {
   color: #0d0d0d;
   background-color: #eec800;
   border-radius: 5px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,8 +89,8 @@ div div label {
   margin: 5px;
   align-content: center;
 } */
-.statistic div p {
+/* .statistic div p {
   width: 70px;
   height: 60px;
   margin: 5px;
-}
+} */
