@@ -6,12 +6,24 @@ import Donate from './pages/Donate/Donate';
 import News from './pages/News/News';
 import Footer from './components/Footer/Footer';
 
-const Router = () => {
+const Routes = () => {
     return(
         <Fragment>
             <BrowserRouter>
-            {/* <div className=""> */}
             <Navigation />
+            {/* <div className=""> */}
+            {/* <BrowserRouter>
+                <div className='nav-wrap'>
+                    <div className='logo-brand'>
+                        <p className='logo-label'><FaVine className='logo' />COVID19G0</p>
+                    </div>
+                    <div className='wrap'>
+                        <p><Link to='/' className='item'>Home</Link></p>
+                        <p><NavLink to='/Donate' className='item'>Donate</NavLink></p>
+                        <p><NavLink to='/News' className='item'>News</NavLink><FaCaretDown /></p>
+                    </div>
+                </div>
+            </BrowserRouter> */}
                 <Switch>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/home' component={Home} />
@@ -25,4 +37,4 @@ const Router = () => {
     )
    
 } 
-export default Router;
+export default Routes;

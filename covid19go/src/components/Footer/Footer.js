@@ -2,16 +2,15 @@ import React from 'react';
 import { FaVine, FaTwitter, FaFacebook, FaInstagram, FaYoutube, FaWifi } from 'react-icons/fa';
 import './Footer.css';
 import '../Navigation/Navigation';
-import Navigation from '../Navigation/Navigation';
 
 const Footer = () => {
     return(
         <div>
-            <div className='footer_wrap'>
+            <div className='footer-wrap'>
                 {/* <Navigation /> */}
-                <div className='footer_nav'>
-                    <div className='footer_logo_brand'>
-                        <p className='footer_logo_label'><FaVine className='footer_logo' />COVID19G0</p>
+                <div className='footer-nav'>
+                    <div className='footer-logo-brand'>
+                        <p className='footer-logo-label'><FaVine className='footer-logo' />COVID19G0</p>
                     </div>
                     <ul>
                         <i><FaTwitter /></i>
@@ -22,7 +21,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className='footer_item'>
+                <div className='footer-item'>
                     <span>
                         <li> Channels</li>
                         <li> News Letters</li>

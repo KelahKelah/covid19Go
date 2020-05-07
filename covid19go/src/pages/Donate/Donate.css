@@ -1,5 +1,33 @@
-.donate_wrap {
-width: 30wv;
-height: 40vh;
-background-color: #fff;
+.donate-wrap {
+width: 100vw;
+display: flex;
+}
+.wrap-two {
+    width: 80vw;
+    margin: auto;
+    /* background-color: blueviolet; */
+}
+.donate-text {
+    /* border: 2px solid black; */
+    width: 37vw;
+    height: 77vh;
+}
+.payment {
+    border: 2px solid black;
+    width: 37vw;
+    height: 77vh;
+    margin-left: 5vw;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    /* text-align: left; */
+    color: #000;
+    margin-bottom: 20px;
+}
+i {
+    color:#e6b800
+}
+.heading {
+    margin: auto;
 }
