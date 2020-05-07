@@ -1,4 +1,4 @@
-.home_wrap {
+.home-wrap {
   background-color: #133913;
   width: 550px;
   height: 400px;
@@ -7,7 +7,7 @@
   font-weight: bold;
   font-size: large;
 }
-.main_title {
+.main-title {
   color: #fff;
   text-align: center;
   margin: 15px;
@@ -46,7 +46,7 @@ div div label {
 .width-count {
   width: 12%;
 }
-.confirmed_item {
+.confirmed-item {
   color: #0d0d0d;
   background-color: #eec800;
   border-radius: 5px;
@@ -60,7 +60,7 @@ div div label {
   height: 10vh;
   margin-bottom: 1.2rem;
 }
-.discharged_item {
+.discharged-item {
   color: white;
   background-color: green;
   border-radius: 5px;
@@ -75,7 +75,7 @@ div div label {
   align-content: center;
   height: 10vh;
 }
-.death_item {
+.death-item {
   color: white;
   background-color: red;
   border-radius: 5px;

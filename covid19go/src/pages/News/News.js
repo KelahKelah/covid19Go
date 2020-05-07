@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import Donate from '../Donate/Donate';
-import { FaRegHeart, FaNewspaper, FaRoad, FaGenderless } from 'react-icons/fa';
+import { FaRegHeart, FaGenderless } from 'react-icons/fa';
 import './News.css';
-import { icons } from 'react-icons';
 
 const url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d57067'
-const key = '11583d075b4e49aaacfeaf43f6d5706'
+// const apiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 const News = () => {
     const [news, setNews] = useState({title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
@@ -48,24 +46,21 @@ const News = () => {
 
     
     return(
-        <div>
-            <div className='List_wrap'>
-                <div className='main_news'>
-                    <div>
-                        <h1><FaGenderless />{news.author}</h1>
-                       <span>{news.publishedAt}</span>
-                        <h2>{news.title}</h2> 
-                        <h3>{news.description}</h3>
-                        <a className='myLink' href={news.url} target='blank' >Read More</a> 
+        <div className='news-wrap'>
+            <div className='wrap-two'>
+                <div className='articles'>
+                    <h1><FaGenderless />{news.author}</h1>
+                    <span>{news.publishedAt}</span>
+                    <h2>{news.title}</h2> 
+                    <h3>{news.description}</h3>
+                    <div className='read-more'>
+                        <a className='myLink' href={news.url} target='blank' >Read More</a>
                         <i onClick={() => likeNews + 1}><FaRegHeart style={{margin: ' 0px 5px'}} />{likeNews}Likes</i>
                     </div>
                 </div>
-                <div className='NewImage'>
-                    <div>
-                        <img src={news.urlToImage} alt='ball' target='blank' />
-                    </div>
+                <div>
+                    <img src={news.urlToImage} alt='ball' target='blank' className='img' />
                 </div>
-                
             </div>
             {/* <NewsList /> */}
         </div>

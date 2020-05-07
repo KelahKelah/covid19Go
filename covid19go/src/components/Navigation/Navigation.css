@@ -1,4 +1,4 @@
-.nav_wrap {
+.nav-wrap {
     display: flex;
     width: 100vw;
     background-color: #fff;
@@ -22,7 +22,7 @@
     left: 40vw;
 
 }
-.logo_brand {
+.logo-brand {
 width: 10vw;
 height: 70%;
 }
@@ -30,7 +30,7 @@ height: 70%;
     font-size: 2.5em;
     color: #b38f00;
 }
-.logo_label {
+.logo-label {
     font-Weight: bold;
     color: #0d0d0d;
 }
