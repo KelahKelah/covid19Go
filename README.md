@@ -1,2 +1,3 @@
 # covid19Go
-A go fund me application to raise funds for covid 19  
+A application for covid19 statistics and updates.All includes a gofund me to raise funds for covid19 victims
+
