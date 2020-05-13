@@ -1,6 +1,9 @@
 .footer-wrap {
     width: 100vw;
     background-color: #565d5d;
+    position: fixed;
+    bottom: 0;
+    height: 330px;
 }
 .footer-nav {
     background-color: #3d4343;
@@ -8,13 +11,12 @@
     height: 10vh;
     /* width: 80vw; */
     /* margin: auto; */
-
 }
 .footer-item {
     display: flex;
     justify-content: center;
     color: #f2f3f3;
-    height: 35vh;
+    height: 35%;
     width: 80vw;
     margin: auto;
     /* padding: 10px 20px; */
@@ -35,11 +37,13 @@ ul {
     display: flex;
     position: relative;
     left: 40%;
+    height: 50%;
     margin: auto;
+    overflow: hidden;
     /* justify-content: space-between; */
     /* padding: 3px; */
 }
-ul i {
+ul > i {
     margin: 0px 10px;
     font-size: 1.5em;
 }
@@ -48,6 +52,6 @@ span {
     list-style-type: none; 
 
 }
-span li {
+span > li {
     margin: 10px;
 }

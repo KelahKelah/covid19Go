@@ -1,6 +1,9 @@
 .news-wrap {
     display: flex;
     width: 100vw;
+    margin-top: 97px; /* for navigation */
+    margin-bottom: 330px;
+
 }
 .wrap-two {
     display: flex;
@@ -14,7 +17,7 @@
 }
 .articles {
     width: 40vw;
-    height: 30vh;
+    height: 30%;
     margin: 30px 0px;
 
 }
@@ -22,7 +25,7 @@ div > h3 {
     color: #737373;
 }
 span {
-    color:#B6B6B6;
+    color:#999999;
 }
 .myLink {
     background-color: #856114;
@@ -31,6 +34,7 @@ span {
 }
 i {
     color: #e6b800;
+    font-size: 1.5em;
 }
 .read-more {
     margin-top: 5px;
@@ -41,5 +45,10 @@ i {
     height: 30vh;
     padding-left: 5vw;
     margin: 40px 0px;
-
+}
+div a {
+    text-decoration: none;
+}
+div p {
+    color: #666666;
 }

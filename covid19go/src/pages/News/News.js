@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { FaRegHeart, FaGenderless } from 'react-icons/fa';
+// import { FaRegHeart, FaGenderless } from 'react-icons/fa';
 import './News.css';
+import NewsList from './NewsList';
 
 const url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d57067'
 // const apiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 const News = () => {
-    const [news, setNews] = useState({title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
-    const [likeNews, setLikeNews] = useState(0)
+    const [news, setNews] = useState({ allNews: [], title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
+    const [voteNews, setVoteNews] = useState(0)
     const [errorMessage, setErrorMessage] = useState({error: '', success: ''})
     const [isLoading, setIsLoading] = useState(false)
 
@@ -17,53 +18,48 @@ const News = () => {
         // testing API
         Axios.get(url)
         .then(res => {
-            console.log('the response is :', res)
+            // console.log('the response is :', res)
             // setIsLoading(true)
             if(res.status === 200) {
-                setNews({ title: res.data.articles[1].title, author: res.data.articles[1].author, 
+                setNews({ allNews: res.data.articles.slice(0, 11), title: res.data.articles[1].title, author: res.data.articles[1].author, 
                         publishedAt:res.data.articles[1].publishedAt, description: res.data.articles[1].description,  
                         url: res.data.articles[1].url, urlToImage: res.data.articles[1].urlToImage })
-                setLikeNews(3)
-                console.log('Response data', res.data.articles[1].description)
+                setVoteNews(3)
+                console.log('Response data', res.data.articles)
                 // console.log('Response data', res.data.articles.description)
-
             } else {
                 setErrorMessage({error:'something went wrong'})
-                console.log('else block')
+                // console.log('else block')
+                console.log('Response data', news.res.data.articles)
+
             }
             
         })
             .catch((error) => {
                 if(error) {
-                    console.log(console.error()
-                    )
+                    console.log(error)
                 }
             })
     
     }, [])
+    console.log('all of us', news.allNews)
 
-    console.log(likeNews)
-
-    
     return(
-        <div className='news-wrap'>
-            <div className='wrap-two'>
-                <div className='articles'>
-                    <h1><FaGenderless />{news.author}</h1>
-                    <span>{news.publishedAt}</span>
-                    <h2>{news.title}</h2> 
-                    <h3>{news.description}</h3>
-                    <div className='read-more'>
-                        <a className='myLink' href={news.url} target='blank' >Read More</a>
-                        <i onClick={() => likeNews + 1}><FaRegHeart style={{margin: ' 0px 5px'}} />{likeNews}Likes</i>
-                    </div>
-                </div>
-                <div>
-                    <img src={news.urlToImage} alt='ball' target='blank' className='img' />
-                </div>
-            </div>
-            {/* <NewsList /> */}
-        </div>
+        <>
+            <NewsList 
+                setVoteNews={setVoteNews}
+                voteNews={voteNews}
+                news={news.id}
+                allNews={news.allNews}
+                title={news.title} 
+                author={news.author} 
+                publishedAt={news.publishedAt} 
+                description={news.description} 
+                url={news.url} 
+                urlToImage={news.urlToImage} 
+            />
+        </>
+
     )
 }
 export default News;

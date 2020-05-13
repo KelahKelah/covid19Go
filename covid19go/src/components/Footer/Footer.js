@@ -7,7 +7,6 @@ const Footer = () => {
     return(
         <div>
             <div className='footer-wrap'>
-                {/* <Navigation /> */}
                 <div className='footer-nav'>
                     <div className='footer-logo-brand'>
                         <p className='footer-logo-label'><FaVine className='footer-logo' />COVID19G0</p>
