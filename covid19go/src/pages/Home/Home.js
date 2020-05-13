@@ -22,9 +22,9 @@ const Home = () => {
             console.log(myDate)
 
             if(res.status === 200) {
-                // setStatistic({confirmed: res.confirmed.count, discharged: res.discharged.count, deaths: res.death.count})
-                console.log('Response data', res)
-
+                setStatistic({confirmed: res.data.infected, discharged: res.data.recovered, death: res.data.deceased})
+                // console.log('res.response data', res)
+                // console.log('Single data', res.data.infected, res.data.recovered, res.data.deceased)
             } else {
                 setError(true)
             }

@@ -1,6 +1,9 @@
 .donate-wrap {
 width: 100vw;
 display: flex;
+margin-top: 97px;
+margin-bottom: 330px; 
+
 }
 .wrap-two {
     width: 80vw;

@@ -3,6 +3,8 @@
   width: 550px;
   height: 400px;
   margin: 70px auto;
+  margin-top: 97px;          /* for a fixed navigation */
+  margin-bottom: 330px;      /* for a fixed footer */
   text-align: center;
   font-weight: bold;
   font-size: large;
