@@ -1,15 +1,15 @@
 import React from 'react';
 import './Donate.css';
-import {FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
+import {FaQuoteLeft, FaQuoteRight, FaCaretRight} from 'react-icons/fa'
 
 const Donate = (props) => {
     
     return(
         <>
-            <div className='heading'>
-                    <h2>Donate to Covid19GO!</h2>
-            </div>
             <div className="donate-wrap">
+                <div className='heading'>
+                    <h2>Donate to Covid19GO!</h2>
+                </div>
                 <div className='wrap-two'>
                     <div className="donate-text">
                         <i><FaQuoteLeft /></i>
@@ -31,11 +31,18 @@ const Donate = (props) => {
                     
                     <div className="payment">
                         <p>Select Amount</p>
+                        <div className='custom-button'>
+                            <button>N500</button>
+                            <button>N1000</button>
+                            <button>N1500</button>
+                            <button>N2000</button>
+                            <button>N2500</button>
+                            <button>N3000</button>
+                            <button>N3500</button>
+                            <button>N4000</button>
+                        </div>
                         <div>
-                            <button>5</button>
-                            <button>10</button>
-                            <button>15</button>
-                            <button>20</button>
+                            <button>Next Step<FaCaretRight /></button>
                         </div>
                         
                     </div>             
