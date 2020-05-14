@@ -1,16 +1,21 @@
 .news-wrap {
     display: flex;
-    width: 100vw;
-    margin-top: 97px; /* for navigation */
-    margin-bottom: 330px;
+    width: 100%;
+    box-sizing: border-box;
+    /* height: 100vh; */
+    /* margin-top: 97px; */
+    /* margin-bottom: 330px; */
+    /* overflow: auto; */
 
 }
 .wrap-two {
     display: flex;
-    width: 80vw;
+    width: 80%;
     margin: auto;
 }
-
+/* .wrap-boss {
+    padding: ;
+} */
 .articles h1 {
     display: inline;
     color: #e6b800
@@ -26,6 +31,7 @@ div > h3 {
 }
 span {
     color:#999999;
+    /* width: 150% */
 }
 .myLink {
     background-color: #856114;

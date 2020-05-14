@@ -36,7 +36,7 @@ const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, 
 
     
     return(
-        <div>{MyAllNews}</div>
+        <div className='wrap-boss'>{MyAllNews}</div>
     )
 
    

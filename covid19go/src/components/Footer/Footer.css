@@ -1,9 +1,10 @@
 .footer-wrap {
     width: 100vw;
     background-color: #565d5d;
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     height: 330px;
+    box-sizing: border-box;
 }
 .footer-nav {
     background-color: #3d4343;

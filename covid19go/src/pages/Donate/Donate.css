@@ -1,24 +1,22 @@
 .donate-wrap {
 width: 100vw;
-display: flex;
 margin-top: 97px;
-margin-bottom: 330px; 
-
 }
 .wrap-two {
     width: 80vw;
     margin: auto;
+    display: flex;
     /* background-color: blueviolet; */
 }
 .donate-text {
     /* border: 2px solid black; */
-    width: 37vw;
-    height: 77vh;
+    width: 37%;
+    height: 77%;
 }
 .payment {
     border: 2px solid black;
-    width: 37vw;
-    height: 77vh;
+    width: 37%;
+    height: 77%;
     margin-left: 5vw;
 }
 p {
@@ -26,11 +24,29 @@ p {
     line-height: 1.7;
     /* text-align: left; */
     color: #000;
-    margin-bottom: 20px;
+    margin-bottom:  20px;
 }
 i {
     color:#e6b800
 }
 .heading {
-    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+
+}
+.custom-button {
+}
+.custom-button button {
+    background-color: #e6b800;
+    color:#fff;
+    width: 70px;
+    height: 50px;
+    margin: 30px;
+
+}
+div > button {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background-color: #e6b800;
 }
