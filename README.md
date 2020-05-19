@@ -66,9 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
-
-# covid19Go
-A application for covid19 statistics and updates.All includes a gofund me to raise funds for covid19 victims
-
