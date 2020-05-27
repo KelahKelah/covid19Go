@@ -31,26 +31,7 @@ const Home = () => {
         })
     }, [])
 
-    // let getDate = () => {
-    //     let date = {
-    //         currentDate: new Date()
-    //     } 
-
-    // }
-
-
-    // useEffect(() => {
-    //     setStatistic({ confirmed: 1204, discharged: 324, deaths: 41 })
-    //     setCurrentDate({ date: myDate })
-    //     console.log(myDate)
-
-    //     // .catch((error) => {
-    //     //     console.log(error)
-    //     //     setError(true)
-    //     // })
-    // }, [])
-
-
+    
     return (
         <div>
             <div className='main-title'>
@@ -86,11 +67,6 @@ const Home = () => {
                             <div>{statistic.death}</div>
                         </div>
                     </div>
-
-                    {/* <div className="discharged">
-                        <label className="discharged_item">Discharged</label>
-                        <p className="discharged_item">23</p>
-                    </div> */}
 
                 </div>
 
