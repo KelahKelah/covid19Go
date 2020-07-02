@@ -4,7 +4,7 @@ import Axios from 'axios';
 import './News.css';
 import NewsList from './NewsList';
 
-const url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d57067'
+const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d57067'
 // const apiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 const News = () => {
@@ -13,12 +13,12 @@ const News = () => {
     const [errorMessage, setErrorMessage] = useState({error: '', success: ''})
     const [isLoading, setIsLoading] = useState(false)
 
-    
     useEffect(() => {
         // testing API
         Axios.get(url)
         .then(res => {
-            // console.log('the response is :', res)
+            var i;
+            console.log('the index is :', res.data.articles[i])
             // setIsLoading(true)
             if(res.status === 200) {
                 setNews({ allNews: res.data.articles.slice(0, 11), title: res.data.articles[1].title, author: res.data.articles[1].author, 

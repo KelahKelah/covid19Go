@@ -6,7 +6,6 @@ import './Navigation.css';
 const Navigation = () => {
     // const [toggle, setToggle] = useState()
     // useEffect() {
-        
     // }
     const OpenNav = () => {
         const myLoop = document.querySelectorAll('.item')

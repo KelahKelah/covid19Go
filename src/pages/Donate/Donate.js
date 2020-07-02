@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Donate.css';
+import Modal from '../../components/Modal/Modal'
 import {FaQuoteLeft, FaQuoteRight, FaCaretRight} from 'react-icons/fa'
 
 const Donate = (props) => {
+    useEffect(() => {
+
+    }, [])
     
     return(
         <>
             <div className="donate-wrap">
+            <Modal 
+        
+             />
                 <div className='heading'>
                     <h2>Donate to Covid19GO!</h2>
                 </div>
@@ -21,26 +28,15 @@ const Donate = (props) => {
                             on donations and receive no money from any governments or corporations. Our tiny online team ensures even the 
                             smallest contributions go a long way.
                         </p>
-                        <p className='text'>If you encounter any problems with this page or have any questions or comments about how we intend to use funds, 
-                            please feel free to email us by clicking here.covid19Go is secure. Our donation process is fully encrypted to 
-                            ensure all personal and financial information is kept safe.With your donation you accept Covid19GO's privacy 
-                            policy. You can unsubscribe at any time.
+                        <p className='text'>If you have any questions about how we intend to use funds, 
+                            please feel free to email us here. Our payment process is fully encrypted to 
+                            ensure all information is kept safe us. 
+                            
                         </p> 
                        <i><FaQuoteRight  /></i>
                     </div>
                     
                     <div className="payment">
-                        <p>Select Amount</p>
-                        <div className='custom-button'>
-                            <button>N500</button>
-                            <button>N1000</button>
-                            <button>N1500</button>
-                            <button>N2000</button>
-                            <button>N2500</button>
-                            <button>N3000</button>
-                            <button>N3500</button>
-                            <button>N4000</button>
-                        </div>
                         <div>
                             <button>Next Step<FaCaretRight /></button>
                         </div>
