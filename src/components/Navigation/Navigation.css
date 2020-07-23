@@ -59,7 +59,7 @@
     font-Weight: bold;
     color: #0d0d0d;
 }
-div .item:hover {
+.item:hover {
     color: #e6b800;
 }
 

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import { FaVine, FaCaretDown, FaBars, FaAlignJustify } from 'react-icons/fa';
+import { Link, NavLink, withRouter} from 'react-router-dom';
+import { FaVine, FaCaretDown, FaBars, FaAlignJustify, FaUserCircle } from 'react-icons/fa';
 import './Navigation.css';
 
-const Navigation = () => {
+const Navigation = (props) => {
     // const [toggle, setToggle] = useState()
     // useEffect() {
     // }
@@ -15,8 +15,14 @@ const Navigation = () => {
            myLoop[i].style.display = 'block'
         }
 
-    }
-    return(         <>
+    };
+    // Logout component
+    const logout = () => {
+        props.history.push("/Home");
+
+    };
+    return(         
+    <>
             <div className='nav-wrap'>
                 <div className='logo-brand'>
                     <p className='logo-label'><FaVine className='logo' />COVID19G0</p>
@@ -25,12 +31,15 @@ const Navigation = () => {
                     <p><Link to='/' className='item'>Home</Link></p>
                     <p><NavLink to='/News' className='item'>News</NavLink></p>
                     <p><NavLink to='/Donate' className='item'>Donate</NavLink></p>
+                    {/* <p><NavLink to='/Loader' className='item'>Loader</NavLink></p> */}
+                    {/* <p><NavLink to='/Login' className='item'>Login</NavLink></p> */}
+                    <p><NavLink to='/Logout' className='item' onClick={logout} >Logout<FaUserCircle /></NavLink></p>
                     <p className='icon'><FaAlignJustify onClick={OpenNav} /></p>
 
                 </div>
             </div>
         </>
     )
-
 }
-export default Navigation;
+// withRouter for props.history.push of logout
+export default withRouter(Navigation);
