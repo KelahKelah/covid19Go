@@ -5,6 +5,7 @@ import Home from './pages/Home/Home';
 import Donate from './pages/Donate/Donate';
 import News from './pages/News/News';
 import Footer from './components/Footer/Footer';
+import Login from './pages/Login/Login';
 
 const Routes = () => {
     return(
@@ -29,6 +30,7 @@ const Routes = () => {
                     <Route exact path='/home' component={Home} />
                     <Route exact path='/Donate' component={Donate} />
                     <Route exact path='/News' component={News} />
+                    <Route exact path='/Login' component={Login} />
                 </Switch>
             {/* </div> */}
         </BrowserRouter>
