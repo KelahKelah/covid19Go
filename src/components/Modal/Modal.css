@@ -1,0 +1,8 @@
+.modal-container {
+    width: 100%;
+}
+.modal-content {
+    background-color: aqua;
+    /* width: 50%; */
+    /* height: 50%; */
+}
