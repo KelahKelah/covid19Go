@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 const Login = (props) => {
+
+     const postUrl = "https://lawyerppserver.herokuapp.com/api/auth/authenticate"
+
 
     const handleSubmit = () => {
         console.log('Loggednin')
@@ -8,7 +12,12 @@ const Login = (props) => {
         console.log('checking login props',props)
     }
 
-    
+    useEffect(() => {
+        axios.post(postUrl, {payload: {email: "", password:""}})
+        .then((response) => {
+            console.log('the response', response )
+        })
+    }, []);
 return(     
         <>
         <div className="sign-in-page bg-white">

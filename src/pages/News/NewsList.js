@@ -12,7 +12,7 @@ const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, 
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
             // console.log('array of all new: ', allNews)
             return( <div key={i} className='news-wrap'>
-            <div className='wrap-two'>
+            <div className='news-wrap-two'>
                 <div className='articles'>
                     <h1><FaGenderless />{a.author}</h1>
                     <span>{a.publishedAt}</span>
