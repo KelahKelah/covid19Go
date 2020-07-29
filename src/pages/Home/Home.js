@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
+
 // import { baseUrl } from '../../util/apiCall'
 
 // const GoogleMapApikey = 'AIzaSyC0Cq0grSLW5T4wMwT8aXIyokN1mYT_XHA'
@@ -71,9 +72,7 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className='map'>
-
-            </div>
+          
         </div>
     )
 }

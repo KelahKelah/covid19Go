@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Loader from '../../components/Loader/Loader';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
 import Errorpage from "../../components/Error/Error";
 
@@ -15,6 +16,15 @@ const NewsList = ({ voteNews, setVoteNews, allNews, error, setError }) => {
         }
         // setVoteNews(3)
     }, []);
+const NewsList = ({ voteNews, setVoteNews, allNews, setIsLoading, isLoading}) => {
+    // const [voteNews, setVoteNews] = useState(0)
+
+    // useEffect(() => {
+    //     setVoteNews(3)
+    // }, [])
+    // console.log("check is loading", isLoading)
+    // setIsLoading(true)
+    console.log("checking is loading", isLoading)
          
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
             console.log('array of all new: ', allNews)
@@ -42,12 +52,13 @@ const NewsList = ({ voteNews, setVoteNews, allNews, error, setError }) => {
         : (false)
 
     
-    return error  ? ( 
-    <Errorpage /> 
-    ) : (
+    return isLoading? 
+     <Loader 
+        // style={{backgroundColor:'blue', width: 35, height: 25}}
+    /> : ( 
         <div className='wrap-boss'>{MyAllNews}</div>
     )
 
-   
+    }
 }
 export default NewsList;

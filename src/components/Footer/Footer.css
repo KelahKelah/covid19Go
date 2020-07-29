@@ -3,13 +3,13 @@
     background-color: #565d5d;
     /* position: fixed; */
     bottom: 0;
-    height: 330px;
+    height: 70vh;
     box-sizing: border-box;
 }
 .footer-nav {
     background-color: #3d4343;
     color:  #a2a9a9;
-    height: 10vh;
+    height: 20%;
     /* width: 80vw; */
     /* margin: auto; */
 }
@@ -27,7 +27,7 @@
     height: 50%;
 }
 .footer-logo {
-    font-size: 2.5em;
+    font-size: 1.2em;
     color: #b38f00;
 }
 .footer-logo-label {
@@ -46,7 +46,7 @@ ul {
 }
 ul > i {
     margin: 0px 10px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 span {
     margin:     50px;

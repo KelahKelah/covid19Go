@@ -1,4 +1,6 @@
 import React from 'react';
+import './Login.css';
+// import Loader from '';
 
 const Login = (props) => {
 
@@ -11,13 +13,11 @@ const Login = (props) => {
     
 return(     
         <>
-        <div className="sign-in-page bg-white">
-            <div className="container-fluid p-0">
-                <div className="row no-gutters">
+            <div className="container-fluid login-wrap">
+                <div className="row">
                 <div className="col-sm-6 align-self-center">
-                    <div className="sign-in-from">
-                    <h1 className="mb-0">Log in</h1>
-                    <p>Enter your email address and password to log in.</p>
+                    <div className="">
+                    <p>Enter your email and password to log in.</p>
                     <form className="mt-4" onSubmit={handleSubmit}>
                         <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email address</label>
@@ -51,14 +51,9 @@ return(
                     </form>
                     </div>
                 </div>
-                <div className="col-sm-6">
-                    <div className="login-image">
-
-                    </div>
-                </div>
+              
                 </div>
             </div>
-        </div>
         </>
      )
 }

@@ -14,9 +14,9 @@ const Navigation = () => {
         console.log(myLoop[i])
            myLoop[i].style.display = 'block'
         }
-
     }
-    return(         <>
+    return(        
+         <>
             <div className='nav-wrap'>
                 <div className='logo-brand'>
                     <p className='logo-label'><FaVine className='logo' />COVID19G0</p>
@@ -25,8 +25,8 @@ const Navigation = () => {
                     <p><Link to='/' className='item'>Home</Link></p>
                     <p><NavLink to='/News' className='item'>News</NavLink></p>
                     <p><NavLink to='/Donate' className='item'>Donate</NavLink></p>
+                    <p><NavLink to='/Login' className='item'>Login</NavLink></p>
                     <p className='icon'><FaAlignJustify onClick={OpenNav} /></p>
-
                 </div>
             </div>
         </>

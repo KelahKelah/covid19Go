@@ -45,8 +45,8 @@ const Donate = (props) => {
             </div>
             {/* Payment Modal  */}
             <div data-target="id">
-                <div class="modal-head"></div>
-                <div class="modal-content">
+                <div className="modal-head"></div>
+                <div className="modal-content">
                     {/* <p>Yes</p> */}
                 </div>
 
