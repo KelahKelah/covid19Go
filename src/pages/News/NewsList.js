@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import Loader from '../../components/Loader/Loader';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
 
 
-const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, description, url,urlToImage }) => {
+const NewsList = ({ voteNews, setVoteNews, allNews, setIsLoading, isLoading}) => {
     // const [voteNews, setVoteNews] = useState(0)
 
     // useEffect(() => {
     //     setVoteNews(3)
     // }, [])
+    // console.log("check is loading", isLoading)
+    // setIsLoading(true)
+    console.log("checking is loading", isLoading)
          
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
             // console.log('array of all new: ', allNews)
@@ -35,7 +39,10 @@ const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, 
         : (false)
 
     
-    return(
+    return isLoading? 
+     <Loader 
+        // style={{backgroundColor:'blue', width: 35, height: 25}}
+    /> : ( 
         <div className='wrap-boss'>{MyAllNews}</div>
     )
 

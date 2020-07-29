@@ -71,9 +71,7 @@ const Home = () => {
                 </div>
 
             </div>
-            <div className='map'>
-
-            </div>
+          
         </div>
     )
 }

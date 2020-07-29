@@ -11,7 +11,7 @@ const News = () => {
     const [news, setNews] = useState({ allNews: [], title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
     const [voteNews, setVoteNews] = useState(0)
     const [errorMessage, setErrorMessage] = useState({error: '', success: ''})
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         // testing API
@@ -19,11 +19,13 @@ const News = () => {
         .then(res => {
             var i;
             console.log('the index is :', res.data.articles[i])
-            // setIsLoading(true)
+            setIsLoading(false)
             if(res.status === 200) {
-                setNews({ allNews: res.data.articles.slice(0, 11), title: res.data.articles[1].title, author: res.data.articles[1].author, 
-                        publishedAt:res.data.articles[1].publishedAt, description: res.data.articles[1].description,  
-                        url: res.data.articles[1].url, urlToImage: res.data.articles[1].urlToImage })
+                // setIsLoading(false)
+                setNews({ allNews: res.data.articles.slice(0, 11)})
+                // setNews({ allNews: res.data.articles.slice(0, 11), title: res.data.articles[1].title, author: res.data.articles[1].author, 
+                //     publishedAt:res.data.articles[1].publishedAt, description: res.data.articles[1].description,  
+                //     url: res.data.articles[1].url, urlToImage: res.data.articles[1].urlToImage })
                 setVoteNews(3)
                 console.log('Response data', res.data.articles)
                 // console.log('Response data', res.data.articles.description)
@@ -42,21 +44,18 @@ const News = () => {
             })
     
     }, [])
-    console.log('all of us', news.allNews)
+    // console.log('all of us', news.allNews)
+    // console.log("what is is laoding?", isLoading)
 
     return(
         <>
             <NewsList 
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
                 setVoteNews={setVoteNews}
                 voteNews={voteNews}
                 news={news.id}
                 allNews={news.allNews}
-                title={news.title} 
-                author={news.author} 
-                publishedAt={news.publishedAt} 
-                description={news.description} 
-                url={news.url} 
-                urlToImage={news.urlToImage} 
             />
         </>
 

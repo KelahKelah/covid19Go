@@ -27,7 +27,6 @@ const Footer = () => {
                         <li> Apps</li>
                         <li> Directory</li>
                         <li> Apps</li>
-                        <li> Tv Schedule</li>
                     </span>
                     <span>
                         <li> Directory</li>
@@ -35,7 +34,6 @@ const Footer = () => {
                         <li> Directory</li>
                         <li> Channels</li>
                         <li> Apps</li>
-                        <li> Tv Schedule</li>
                     </span>
                     <span>
                         <li> Podcasts</li>
@@ -43,7 +41,6 @@ const Footer = () => {
                         <li> Directory</li>
                         <li> Channels</li>
                         <li> Apps</li>
-                        <li> Tv Schedule</li>                   
                     </span>
                 </div>
             </div>
