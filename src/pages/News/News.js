@@ -4,14 +4,14 @@ import Axios from 'axios';
 import './News.css';
 import NewsList from './NewsList';
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d57067'
+const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d5706'
 // const apiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 const News = () => {
-    const [news, setNews] = useState({ allNews: [], title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
-    const [voteNews, setVoteNews] = useState(0)
-    const [errorMessage, setErrorMessage] = useState({error: '', success: ''})
-    const [isLoading, setIsLoading] = useState(false)
+    const [news, setNews] = useState({ allNews: [], title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''});
+    const [voteNews, setVoteNews] = useState(0);
+    const [error, setError] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         // testing API
@@ -27,36 +27,28 @@ const News = () => {
                 setVoteNews(3)
                 console.log('Response data', res.data.articles)
                 // console.log('Response data', res.data.articles.description)
-            } else {
-                setErrorMessage({error:'something went wrong'})
-                // console.log('else block')
-                console.log('Response data', news.res.data.articles)
-
-            }
-            
+            } 
         })
             .catch((error) => {
                 if(error) {
-                    console.log(error)
+                    setError(true)
+                    console.log("checking my error" , error)
+                    
                 }
             })
     
     }, [])
-    console.log('all of us', news.allNews)
+    console.log('checking secong', error)
 
     return(
         <>
             <NewsList 
+                error={error}
+                setError={setError}
                 setVoteNews={setVoteNews}
                 voteNews={voteNews}
                 news={news.id}
-                allNews={news.allNews}
-                title={news.title} 
-                author={news.author} 
-                publishedAt={news.publishedAt} 
-                description={news.description} 
-                url={news.url} 
-                urlToImage={news.urlToImage} 
+                allNews={news.allNews} 
             />
         </>
 

@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
+import Errorpage from "../../components/Error/Error";
 
 
-const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, description, url,urlToImage }) => {
+const NewsList = ({ voteNews, setVoteNews, allNews, error, setError }) => {
+    // const [error, setError] = useState(false);
+
     // const [voteNews, setVoteNews] = useState(0)
 
-    // useEffect(() => {
-    //     setVoteNews(3)
-    // }, [])
+    useEffect(() => {
+        if(allNews.length === 0) {
+            setError(true);
+            console.log('The error iis ', error)
+        }
+        // setVoteNews(3)
+    }, []);
          
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
-            // console.log('array of all new: ', allNews)
+            console.log('array of all new: ', allNews)
             return( <div key={i} className='news-wrap'>
             <div className='wrap-two'>
                 <div className='articles'>
@@ -35,7 +42,9 @@ const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, 
         : (false)
 
     
-    return(
+    return error  ? ( 
+    <Errorpage /> 
+    ) : (
         <div className='wrap-boss'>{MyAllNews}</div>
     )
 
