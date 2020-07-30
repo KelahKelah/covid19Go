@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
+import Loader from '../../components/Loader/Loader';
 // import { baseUrl } from '../../util/apiCall'
 
 // const GoogleMapApikey = 'AIzaSyC0Cq0grSLW5T4wMwT8aXIyokN1mYT_XHA'
 const url = 'https://api.apify.com/v2/key-value-stores/Eb694wt67UxjdSGbc/records/LATEST?disableRedirect=true'
 const Home = () => {
-    const [statistic, setStatistic] = useState({ confirmed: 0, discharged: 0, death: 0 })
-    const [currentDate, setCurrentDate] = useState({ date: '' })
-    const [loading, setLoading] = useState(false)
-    const [error, setError] = useState(false)
+    const [statistic, setStatistic] = useState({ confirmed: 0, discharged: 0, death: 0 });
+    const [currentDate, setCurrentDate] = useState({ date: '' });
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(false);
 
     let myDate = new Date().toDateString()
 
@@ -17,7 +18,7 @@ const Home = () => {
             // testing API
         axios.get(url)
         .then(res => {
-            setLoading(true)
+            setIsLoading(false)
             setCurrentDate({date: myDate})
             console.log(myDate)
 
@@ -32,7 +33,7 @@ const Home = () => {
     }, [])
 
     
-    return (
+    return isLoading? <Loader /> : (
         <div>
             <div className='main-title'>
                 <h1>COVID-19 UPDATE</h1>
