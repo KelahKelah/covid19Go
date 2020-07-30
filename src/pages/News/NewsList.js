@@ -3,33 +3,32 @@ import Loader from '../../components/Loader/Loader';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
 import Errorpage from "../../components/Error/Error";
 
-
-const NewsList = ({ voteNews, setVoteNews, allNews, error, setError }) => {
+const NewsList = ({ voteNews, setVoteNews, allNews, error, setError, isLoading }) => {
     // const [error, setError] = useState(false);
-
-    // const [voteNews, setVoteNews] = useState(0)
 
     useEffect(() => {
         if(allNews.length === 0) {
-            setError(true);
+            // setError(true);
             console.log('The error iis ', error)
         }
-        // setVoteNews(3)
+        setVoteNews(3)
     }, []);
-const NewsList = ({ voteNews, setVoteNews, allNews, setIsLoading, isLoading}) => {
-    // const [voteNews, setVoteNews] = useState(0)
 
-    // useEffect(() => {
-    //     setVoteNews(3)
-    // }, [])
-    // console.log("check is loading", isLoading)
-    // setIsLoading(true)
-    console.log("checking is loading", isLoading)
-         
+// const NewsList = ({ voteNews, setVoteNews, allNews, setIsLoading, isLoading}) => {
+//     // const [voteNews, setVoteNews] = useState(0)
+
+//     // useEffect(() => {
+//     //     setVoteNews(3)
+//     // }, [])
+//     // console.log("check is loading", isLoading)
+//     // setIsLoading(true)
+//     console.log("checking is loading", isLoading)
+console.log('array of all new: ', allNews)
+
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
             console.log('array of all new: ', allNews)
             return( <div key={i} className='news-wrap'>
-            <div className='wrap-two'>
+            <div className='news-wrap-two'>
                 <div className='articles'>
                     <h1><FaGenderless />{a.author}</h1>
                     <span>{a.publishedAt}</span>
@@ -49,16 +48,17 @@ const NewsList = ({ voteNews, setVoteNews, allNews, setIsLoading, isLoading}) =>
             </div>
         </div> )
         }))
-        : (false)
+        : setError(true)
+    // }
 
     
-    return isLoading? 
-     <Loader 
-        // style={{backgroundColor:'blue', width: 35, height: 25}}
-    /> : ( 
+    return isLoading ? (
+     <Loader /> 
+     ) : error ? (
+    <Errorpage /> 
+    ) : (
         <div className='wrap-boss'>{MyAllNews}</div>
     )
-
-    }
+  
 }
 export default NewsList;

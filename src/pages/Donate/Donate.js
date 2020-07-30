@@ -35,21 +35,57 @@ const Donate = (props) => {
                     </div>
                     
                     <div className="payment">
-                        <div>
-                            <button className="btn btn-warning" data-toggle="" data-taget="#paymentModal">Donate</button>
-                        </div>
-                        
+                        <button type="button" data-toggle="modal" data-target="#paymentModal" className="btn btn-warning" >Donate</button>
                     </div>             
                 </div>
-                
             </div>
+            
+       
             {/* Payment Modal  */}
-            <div data-target="id">
-                <div className="modal-head"></div>
-                <div className="modal-content">
-                    {/* <p>Yes</p> */}
+            <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Add payment info</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div className="form-group">
+                                    <label>Full name</label>
+                                    <input type="text" name="" />
+                                </div>
+                                <div className="form-group">
+                                    <label>Email </label>
+                                    <input type="email" name="" />
+                                </div>
+                                <div className="form-group">
+                                    <label>Payment Method</label>
+                                    <input type="select" name="" />
+                                </div>
+                                <div className="form-group">
+                                    <label>Card number</label>
+                                    <input type="number" name="" />
+                                </div>
+                                <div className="form-group">
+                                    <label>Add Cvv</label>
+                                    <input type="number" name="" />
+                                </div>
+                                
+                                <div className="form-group">
+                                    <label>Expiry date</label>
+                                    <input type="number" name="" />
+                                </div>
+                               
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-warning">Pay</button>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </>
     )
