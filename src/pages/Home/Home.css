@@ -85,6 +85,12 @@ div div label {
   align-items: center;
   justify-content: center;
 }
+
+/* Loader style  */
+.small-overlay {
+  height: 400vh;
+}
+
 /* hi {
   font-family: 
 } */

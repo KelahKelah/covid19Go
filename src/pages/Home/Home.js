@@ -33,7 +33,11 @@ const Home = () => {
     }, [])
 
     
-    return isLoading? <Loader /> : (
+    return isLoading? 
+    <div className="small-overlay">
+
+    
+    <Loader /> </div> : (
         <div>
             <div className='main-title'>
                 <h1>COVID-19 UPDATE</h1>
