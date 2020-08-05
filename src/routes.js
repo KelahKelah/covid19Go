@@ -7,8 +7,6 @@ import News from './pages/News/News';
 import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Login';
 import Error from "./components/Error/Error";
-import Errorpage from './components/Error/Error';
-// import Loader from './components/Loader/Loader';
 
 const Routes = () => {
     return(
@@ -21,11 +19,9 @@ const Routes = () => {
                     <Route exact path='/Donate' component={Donate} />
                     <Route exact path='/News' component={News} />
                     <Route exact path='/Login' component={Login} />
-                    <Route exact path='/Errorpage' component={Errorpage} />                    
-                    {/* <Route exact path='/Loader' component={Loader} /> */}
+                    {/* <Route exact path='/Error' component={Error} /> */}
                     {/* <Route exact path="/Donate/:checkoutId" component={Checkout} /> */}
                 </Switch>
-            {/* </div> */}
         </BrowserRouter>
         <Footer />
     </Fragment>

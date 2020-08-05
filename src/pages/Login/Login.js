@@ -1,17 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
+// import Donate from '../Donate/Donate';
+
 // import Loader from '';
 
 const Login = (props) => {
 
+    const handleChange = (e) => {
+        e.preventDefault();
+    }
+
     const handleSubmit = () => {
-        console.log('Loggednin')
-        props.history.push('/Home')
-        console.log('checking login props',props)
+        if(true) {
+            // props.history.push('/Home')
+            props.history.push({
+                pathname:'/Donate',
+                state:"testing"
+            })
+            console.log('checking login props',props)
+        }
+       
     }
 
     
-return(     
+return (     
         <>
             <div className="container-fluid login-wrap">
                 <div className="row">

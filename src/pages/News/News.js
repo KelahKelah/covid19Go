@@ -4,7 +4,7 @@ import Axios from 'axios';
 import './News.css';
 import NewsList from './NewsList';
 
-const url = 'httpss://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d5706'
+const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d5706'
 // const apiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 const News = () => {
@@ -14,7 +14,6 @@ const News = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        // testing API
         Axios.get(url)
         .then(res => {
             var i;

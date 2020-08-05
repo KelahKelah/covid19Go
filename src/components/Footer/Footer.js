@@ -7,11 +7,11 @@ const Footer = () => {
     return(
         <div>
             <div className='footer-wrap'>
-                <div className='footer-nav'>
-                    <div className='footer-logo-brand'>
+                <div className='footer-nav row'>
+                    <div className='footer-logo-brand col-md-6'>
                         <p className='footer-logo-label'><FaVine className='footer-logo' />COVID19G0</p>
                     </div>
-                    <ul>
+                    <ul className="col-md-6">
                         <i><FaTwitter /></i>
                         <i><FaFacebook /></i>
                         <i><FaInstagram /></i>
