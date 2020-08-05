@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { FaVine, FaCaretDown, FaBars, FaAlignJustify } from 'react-icons/fa';
+import { FaVine, FaCaretDown, FaUserAlt, FaAlignJustify } from 'react-icons/fa';
 import './Navigation.css';
 
 const Navigation = () => {
@@ -25,8 +25,11 @@ const Navigation = () => {
                     <p><Link to='/' className='item'>Home</Link></p>
                     <p><NavLink to='/News' className='item'>News</NavLink></p>
                     <p><NavLink to='/Donate' className='item'>Donate</NavLink></p>
-                    <p><NavLink to='/Login' className='item'>Login</NavLink></p>
-                    <p className='icon'><FaAlignJustify onClick={OpenNav} /></p>
+                    <p><NavLink to='/Login' className='item'>Contact</NavLink></p>
+                    {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
+                </div>
+                <div className="admin">
+                    <p><NavLink to='/Login' className='item'><FaUserAlt /> </NavLink></p>
                 </div>
             </div>
         </>

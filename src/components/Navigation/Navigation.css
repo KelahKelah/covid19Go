@@ -67,6 +67,10 @@
 div .item:hover {
     color: #e6b800;
 }
+.admin {
+    position: relative;
+    left: 15%;
+}
 
 @media screen and (max-width: 600px) {
     .wrap .item {

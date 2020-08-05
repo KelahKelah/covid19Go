@@ -1,29 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Loader from '../../components/Loader/Loader';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
-import Errorpage from "../../components/Error/Error";
+import Error from "../../components/Error/Error";
 
 const NewsList = ({ voteNews, setVoteNews, allNews, error, setError, isLoading }) => {
     // const [error, setError] = useState(false);
+// console.log('checking loader after state', isLoading)
+console.log('checking error after state', error)
 
     useEffect(() => {
         if(allNews.length === 0) {
             // setError(true);
-            console.log('The error iis ', error)
+            console.log('The error in useEffect is', error)
         }
         setVoteNews(3)
     }, []);
-
-// const NewsList = ({ voteNews, setVoteNews, allNews, setIsLoading, isLoading}) => {
-//     // const [voteNews, setVoteNews] = useState(0)
-
-//     // useEffect(() => {
-//     //     setVoteNews(3)
-//     // }, [])
-//     // console.log("check is loading", isLoading)
-//     // setIsLoading(true)
-//     console.log("checking is loading", isLoading)
-console.log('array of all new: ', allNews)
 
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
             console.log('array of all new: ', allNews)
@@ -49,13 +40,12 @@ console.log('array of all new: ', allNews)
         </div> )
         }))
         : setError(true)
-    // }
 
     
-    return isLoading ? (
-     <Loader /> 
-     ) : error ? (
-    <Errorpage /> 
+    return error ? (
+     <Error /> 
+     ) : isLoading ? (
+    <Loader /> 
     ) : (
         <div className='wrap-boss'>{MyAllNews}</div>
     )

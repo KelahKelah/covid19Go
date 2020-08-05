@@ -2,12 +2,25 @@ import React, { useEffect } from 'react';
 import './Donate.css';
 import Modal from '../../components/Modal/Modal'
 import {FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
+// import Login from '../Login/Login';
 
 const Donate = (props) => {
-    useEffect(() => {
-
-    }, [])
-    
+    console.log('CHECKING TEST',props.location.state)
+    const { state } = props.location
+    // useEffect(() => {
+    //     const {submit} = props
+    //     console.log("checking",submit)
+ 
+    const handleModalSubmit = (name) => {
+        props.history.push(
+            {
+                pathname: '/sucess',
+                state: name
+            }
+        )
+        
+    }
+    console.log("checking",state)
     return(
         <>
             <div className="donate-wrap">
@@ -36,7 +49,8 @@ const Donate = (props) => {
                     
                     <div className="payment">
                         <button type="button" data-toggle="modal" data-target="#paymentModal" className="btn btn-warning" >Donate</button>
-                    </div>             
+                    </div>           
+                          
                 </div>
             </div>
             
@@ -55,34 +69,37 @@ const Donate = (props) => {
                             <form>
                                 <div className="form-group">
                                     <label>Full name</label>
-                                    <input type="text" name="" />
+                                    <input type="text" name="" required />
                                 </div>
                                 <div className="form-group">
                                     <label>Email </label>
-                                    <input type="email" name="" />
+                                    <input type="email" name="" required />
                                 </div>
                                 <div className="form-group">
                                     <label>Payment Method</label>
-                                    <input type="select" name="" />
+                                    <input type="select" name="" required />
                                 </div>
                                 <div className="form-group">
                                     <label>Card number</label>
-                                    <input type="number" name="" />
+                                    <input type="number" name="" required />
                                 </div>
                                 <div className="form-group">
                                     <label>Add Cvv</label>
-                                    <input type="number" name="" />
+                                    <input type="number" name="" required />
                                 </div>
                                 
                                 <div className="form-group">
                                     <label>Expiry date</label>
-                                    <input type="number" name="" />
+                                    <input type="number" name="" required />
                                 </div>
-                               
+                                <div className="form-group">
+                                    <label>Amount</label>
+                                    <input type="number" name="" required />
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-warning">Pay</button>
+                            <button type="button" class="btn btn-warning" onClick={() => {handleModalSubmit()}}>Pay</button>
                         </div>
                     </div>
                 </div>

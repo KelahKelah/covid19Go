@@ -1,5 +1,5 @@
 .donate-wrap {
-    width: 100vw;
+    width: 100%;
     margin-top: 97px;
     }
     .wrap-two {
@@ -33,16 +33,6 @@
     .heading {
         margin-top: 150px;
         text-align: center;
-    
-    }
-    .custom-button {
-    }
-    .custom-button button {
-        background-color: #e6b800;
-        color:#fff;
-        width: 70px;
-        height: 50px;
-        margin: 30px;
     
     }
     div > button {
