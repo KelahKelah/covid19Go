@@ -14,7 +14,7 @@ const Login = (props) => {
         if(true) {
             // props.history.push('/Home')
             props.history.push({
-                pathname:'/Donate',
+                pathname:'/home',
                 state:"testing"
             })
             console.log('checking login props',props)
@@ -25,14 +25,12 @@ const Login = (props) => {
     
 return (     
         <>
-            <div className="container-fluid login-wrap">
-                <div className="row">
-                <div className="col-sm-6 align-self-center">
-                    <div className="">
-                    <p>Enter your email and password to log in.</p>
+            <div className="login-wrap">
+                    <div className="login-container">
+                    <p>Login as Admin</p>
                     <form className="mt-4" onSubmit={handleSubmit}>
                         <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <label htmlFor="exampleInputEmail1">Email</label>
                         <input
                             type="email"
                             className="form-control mb-0"
@@ -62,9 +60,7 @@ return (
                         </div>
                     </form>
                     </div>
-                </div>
               
-                </div>
             </div>
         </>
      )
