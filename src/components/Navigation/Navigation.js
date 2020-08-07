@@ -23,13 +23,13 @@ const Navigation = () => {
                 </div>
                 <div className='wrap'>
                     <p><Link to='/' className='item'>Home</Link></p>
-                    <p><NavLink to='/News' className='item'>News</NavLink></p>
-                    <p><NavLink to='/Donate' className='item'>Donate</NavLink></p>
-                    <p><NavLink to='/Login' className='item'>Contact</NavLink></p>
+                    <p><NavLink to='/news' className='item'>News</NavLink></p>
+                    <p><NavLink to='/donate' className='item'>Donate</NavLink></p>
+                    <p><NavLink to='/contact' className='item'>Contact</NavLink></p>
                     {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
                 </div>
                 <div className="admin">
-                    <p><NavLink to='/Login' className='item'><FaUserAlt /> </NavLink></p>
+                    <p><NavLink to='/login' className='item'><FaUserAlt /> </NavLink></p>
                 </div>
             </div>
         </>
