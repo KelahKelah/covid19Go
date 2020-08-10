@@ -3,9 +3,8 @@ import Axios from 'axios';
 // import { FaRegHeart, FaGenderless } from 'react-icons/fa';
 import './News.css';
 import NewsList from './NewsList';
+import {newsUrl} from '../../util/apiCall';
 
-const url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=11583d075b4e49aaacfeaf43f6d5706'
-// const apiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 const News = () => {
     const [news, setNews] = useState({ allNews: [], title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
@@ -14,7 +13,7 @@ const News = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        Axios.get(url)
+        Axios.get(newsUrl)
         .then(res => {
             var i;
             console.log('the index is :', res.data.articles[i])
