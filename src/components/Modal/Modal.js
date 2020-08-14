@@ -13,15 +13,14 @@ this.setState()
         return(
             <div className='modal-container'>
                 <div className='modal-content'>
-                    <FaLock />
-                    <h2>Dont panic!</h2>
-                    <div>Our processes are highly secure</div>
+                    <FaLock style={{color:'#b38f00'}} />
+                    <h2>Dont worry!</h2>
+                    <div>Our payment processes are highly secure</div>
                 </div>
             </div>         
         ) 
     }
 
-    
     
 }
 export default Modal;
