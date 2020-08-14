@@ -1,0 +1,111 @@
+.homeWrapper {
+  height: 1000px;
+}
+.homeContainer {
+  background-color: #133913;
+  width: 30%;
+  height: 50%;
+  margin: 50px auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+}
+.title {
+  color: #eec800;
+  font-size: 1.4em;
+  width: 90%;
+  margin: auto;
+  padding: 20px;
+}
+.statistic {
+  margin: 40px auto;
+  height: 50%;
+  width: 70%;
+  /* background-color: blanchedalmond; */
+}
+#date {
+  color: #fff;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  width: 100%;
+  font-size: 0.8em;
+}
+.confirmed {
+  color: #fff;
+  background-color: #eec800;
+  border-radius: 5px;
+  margin: 10px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  font-size: 1.2em;
+
+}
+.confirmedItem {
+  color: #fff;
+  background-color: #eec800;
+  border-radius: 5px;
+  margin: 10px 5px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.discharged {
+  color: #fff;
+  background-color: green;
+  border-radius: 5px;
+  margin: 10px 5px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dischargedItem {
+  color: #fff;
+  background-color: green;
+  border-radius: 5px;
+  margin: 10px 5px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.death {
+  color: #fff;
+  background-color: red;
+  border-radius: 5px;
+  margin: 10px 5px;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.deathItem {
+  color: #fff;
+  background-color: red;
+  border-radius: 5px;
+  margin: 10px 5px;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Loader style  */
+.smallOverlay {
+  height: 600vh;
+}
+@media screen and (max-width:769px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .homeContainer {
+    width: 90%;
+  }
+}
