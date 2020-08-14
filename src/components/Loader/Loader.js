@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 
 function Loader() {
   console.log('checking somethings')
@@ -23,3 +24,16 @@ function Loader() {
 }
 
 export default Loader;
+=======
+import "./Loader.css";
+
+const Loader = () =>{
+    return (
+      <div id="small-overlay">
+        <div className="small-loader"></div>
+      </div>
+    );
+}
+
+export default Loader;
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4

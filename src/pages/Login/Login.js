@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import axios from 'axios';
 
@@ -5,13 +6,33 @@ const Login = (props) => {
 
      const postUrl = "https://lawyerppserver.herokuapp.com/api/auth/authenticate"
 
+=======
+import React, { useState } from 'react';
+import './Login.css';
+// import Donate from '../Donate/Donate';
+
+// import Loader from '';
+
+const Login = (props) => {
+
+    const handleChange = (e) => {
+        e.preventDefault();
+    }
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
 
     const handleSubmit = () => {
-        console.log('Loggednin')
-        props.history.push('/Home')
-        console.log('checking login props',props)
+        if(true) {
+            // props.history.push('/Home')
+            props.history.push({
+                pathname:'/home',
+                state:"testing"
+            })
+            console.log('checking login props',props)
+        }
+       
     }
 
+<<<<<<< HEAD
     useEffect(() => {
         axios.post(postUrl, {payload: {email: "", password:""}})
         .then((response) => {
@@ -19,17 +40,17 @@ const Login = (props) => {
         })
     }, []);
 return(     
+=======
+    
+return (     
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
         <>
-        <div className="sign-in-page bg-white">
-            <div className="container-fluid p-0">
-                <div className="row no-gutters">
-                <div className="col-sm-6 align-self-center">
-                    <div className="sign-in-from">
-                    <h1 className="mb-0">Log in</h1>
-                    <p>Enter your email address and password to log in.</p>
+            <div className="login-wrap">
+                    <div className="login-container">
+                    <p>Login as Admin</p>
                     <form className="mt-4" onSubmit={handleSubmit}>
                         <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">Email address</label>
+                        <label htmlFor="exampleInputEmail1">Email</label>
                         <input
                             type="email"
                             className="form-control mb-0"
@@ -59,15 +80,8 @@ return(
                         </div>
                     </form>
                     </div>
-                </div>
-                <div className="col-sm-6">
-                    <div className="login-image">
-
-                    </div>
-                </div>
-                </div>
+              
             </div>
-        </div>
         </>
      )
 }

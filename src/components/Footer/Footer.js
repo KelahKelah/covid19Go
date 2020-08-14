@@ -7,11 +7,11 @@ const Footer = () => {
     return(
         <div>
             <div className='footer-wrap'>
-                <div className='footer-nav'>
-                    <div className='footer-logo-brand'>
+                <div className='footer-nav row'>
+                    <div className='footer-logo-brand col-md-6'>
                         <p className='footer-logo-label'><FaVine className='footer-logo' />COVID19G0</p>
                     </div>
-                    <ul>
+                    <ul className="col-md-6">
                         <i><FaTwitter /></i>
                         <i><FaFacebook /></i>
                         <i><FaInstagram /></i>
@@ -27,7 +27,6 @@ const Footer = () => {
                         <li> Apps</li>
                         <li> Directory</li>
                         <li> Apps</li>
-                        <li> Tv Schedule</li>
                     </span>
                     <span>
                         <li> Directory</li>
@@ -35,7 +34,6 @@ const Footer = () => {
                         <li> Directory</li>
                         <li> Channels</li>
                         <li> Apps</li>
-                        <li> Tv Schedule</li>
                     </span>
                     <span>
                         <li> Podcasts</li>
@@ -43,7 +41,6 @@ const Footer = () => {
                         <li> Directory</li>
                         <li> Channels</li>
                         <li> Apps</li>
-                        <li> Tv Schedule</li>                   
                     </span>
                 </div>
             </div>

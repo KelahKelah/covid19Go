@@ -4,13 +4,6 @@ import { FaLock } from 'react-icons/fa';
 import './Modal.css'
 
 class Modal extends Component {
-    // constructor() {
-    //     super(props)
-    //     this.state = {
-    //         // ('Youre ready')
-    //     }
-
-    // }
 
     componentDidMount() {
 this.setState()

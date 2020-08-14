@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Link, NavLink, withRouter} from 'react-router-dom';
 import { FaVine, FaCaretDown, FaBars, FaAlignJustify, FaUserCircle } from 'react-icons/fa';
+=======
+import { Link, NavLink } from 'react-router-dom';
+import { FaVine, FaCaretDown, FaUserAlt, FaAlignJustify } from 'react-icons/fa';
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
 import './Navigation.css';
 
 const Navigation = (props) => {
@@ -14,6 +19,7 @@ const Navigation = (props) => {
         console.log(myLoop[i])
            myLoop[i].style.display = 'block'
         }
+<<<<<<< HEAD
 
     };
     // Logout component
@@ -23,12 +29,18 @@ const Navigation = (props) => {
     };
     return(         
     <>
+=======
+    }
+    return(        
+         <>
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
             <div className='nav-wrap'>
                 <div className='logo-brand'>
                     <p className='logo-label'><FaVine className='logo' />COVID19G0</p>
                 </div>
                 <div className='wrap'>
                     <p><Link to='/' className='item'>Home</Link></p>
+<<<<<<< HEAD
                     <p><NavLink to='/News' className='item'>News</NavLink></p>
                     <p><NavLink to='/Donate' className='item'>Donate</NavLink></p>
                     {/* <p><NavLink to='/Loader' className='item'>Loader</NavLink></p> */}
@@ -36,6 +48,15 @@ const Navigation = (props) => {
                     <p><NavLink to='/Logout' className='item' onClick={logout} >Logout<FaUserCircle /></NavLink></p>
                     <p className='icon'><FaAlignJustify onClick={OpenNav} /></p>
 
+=======
+                    <p><NavLink to='/news' className='item'>News</NavLink></p>
+                    <p><NavLink to='/donate' className='item'>Donate</NavLink></p>
+                    <p><NavLink to='/contact' className='item'>Contact</NavLink></p>
+                    {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
+                </div>
+                <div className="admin">
+                    <p><NavLink to='/login' className='item'><FaUserAlt /> </NavLink></p>
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
                 </div>
             </div>
         </>

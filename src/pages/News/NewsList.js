@@ -1,16 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import Loader from '../../components/Loader/Loader';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
+import Error from "../../components/Error/Error";
 
+const NewsList = ({ voteNews, setVoteNews, allNews, error, setError, isLoading }) => {
+    // const [error, setError] = useState(false);
+// console.log('checking loader after state', isLoading)
+console.log('checking error after state', error)
 
-const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, description, url,urlToImage }) => {
-    // const [voteNews, setVoteNews] = useState(0)
+    useEffect(() => {
+        if(allNews.length === 0) {
+            // setError(true);
+            console.log('The error in useEffect is', error)
+        }
+        setVoteNews(3)
+    }, []);
 
-    // useEffect(() => {
-    //     setVoteNews(3)
-    // }, [])
-         
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
-            // console.log('array of all new: ', allNews)
+            console.log('array of all new: ', allNews)
             return( <div key={i} className='news-wrap'>
             <div className='news-wrap-two'>
                 <div className='articles'>
@@ -32,13 +39,16 @@ const NewsList = ({ voteNews, setVoteNews, allNews, title, author, publishedAt, 
             </div>
         </div> )
         }))
-        : (false)
+        : setError(true)
 
     
-    return(
+    return error ? (
+     <Error /> 
+     ) : isLoading ? (
+    <Loader /> 
+    ) : (
         <div className='wrap-boss'>{MyAllNews}</div>
     )
-
-   
+  
 }
 export default NewsList;

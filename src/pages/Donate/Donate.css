@@ -1,4 +1,5 @@
 .donate-wrap {
+<<<<<<< HEAD
 width: 100vw;
 margin-top: 97px;
 }
@@ -51,3 +52,61 @@ div > button {
     color: #fff;
     background-color: #e6b800;
 }
+=======
+    width: 100%;
+    
+    }
+    .wrap-two {
+        width: 60%;
+        height: 40%;
+        margin: auto;
+        font-size: 0.7em !important;
+    }
+    .donate-text {
+        margin: auto;
+        font-size: 1em;
+        height: 80%;
+    }
+    .payment {
+        width: 37%;
+        margin: auto;
+        margin-bottom: 40px;
+        height: 20%;
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.7;
+        /* text-align: left; */
+        color: #000;
+        margin-bottom:  20px;
+    }
+    i {
+        color:#e6b800
+    }
+    .heading {
+        margin-top: 50px;
+        text-align: center;
+    
+    }
+    div > button {
+        width: 150px;
+        height: 50px;
+        color: #fff;
+        background-color: #e6b800;
+    }
+    .modal-content {
+        /* background-color: aqua; */
+        padding: auto;
+    }
+    .form-group {
+        /* background-color: aqua; */
+        /* margin: auto !important; */
+    }
+    h3 {
+        font-weight: 500;
+    }
+    .modal-title {
+/* background-color: aqua; */
+font-weight: 600;
+    }
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4

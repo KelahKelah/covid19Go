@@ -1,10 +1,8 @@
 .home-wrap {
   background-color: #133913;
   width: 550px;
-  height: 400px;
-  margin: 70px auto;
-  margin-top: 97px;          /* for a fixed navigation */
-  margin-bottom: 330px;      /* for a fixed footer */
+  height: 450px;
+  margin: 100px auto;      
   text-align: center;
   font-weight: bold;
   font-size: large;
@@ -18,9 +16,10 @@
 }
 .title {
   color: #eec800;
-}
-div div label {
-  /* display: inline; */
+  font-size: 0.3rem;
+  font-weight: 100;
+  margin-top: 20px;
+  padding: 0.5px 0px;
 }
 
 .statistic {
@@ -85,14 +84,10 @@ div div label {
   align-items: center;
   justify-content: center;
 }
-/* label {
-  width: 250px;
-  height: 60px;
-  margin: 5px;
-  align-content: center;
-} */
-/* .statistic div p {
-  width: 70px;
-  height: 60px;
-  margin: 5px;
-} */
+
+/* Loader style  */
+.small-overlay {
+  height: 400vh;
+}
+
+

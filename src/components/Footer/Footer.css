@@ -1,17 +1,14 @@
 .footer-wrap {
-    width: 100vw;
+    width: 100%;
+    height: 70vh;
     background-color: #565d5d;
-    /* position: fixed; */
-    bottom: 0;
-    height: 330px;
-    box-sizing: border-box;
+  
 }
 .footer-nav {
     background-color: #3d4343;
     color:  #a2a9a9;
-    height: 10vh;
-    /* width: 80vw; */
-    /* margin: auto; */
+    height: 20%;
+    margin: 0;
 }
 .footer-item {
     display: flex;
@@ -20,14 +17,12 @@
     height: 35%;
     width: 80vw;
     margin: auto;
-    /* padding: 10px 20px; */
 }
 .footer-logo-brand {
-    /* width: 10vw; */
     height: 50%;
 }
 .footer-logo {
-    font-size: 2.5em;
+    font-size: 1.2em;
     color: #b38f00;
 }
 .footer-logo-label {
@@ -37,16 +32,15 @@
 ul {
     display: flex;
     position: relative;
-    left: 40%;
     height: 50%;
     margin: auto;
+    padding: 0%;
     overflow: hidden;
-    /* justify-content: space-between; */
-    /* padding: 3px; */
+ 
 }
 ul > i {
     margin: 0px 10px;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 span {
     margin:     50px;
