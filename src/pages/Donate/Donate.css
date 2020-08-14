@@ -1,4 +1,58 @@
 .donate-wrap {
+<<<<<<< HEAD
+width: 100vw;
+margin-top: 97px;
+}
+.wrap-two {
+    width: 40%;
+    margin: auto;
+    /* background-color: aqua; */
+}
+.donate-text {
+    /* border: 2px solid black; */
+    /* width: 37%; */
+    margin: auto;
+    /* height: 77%; */
+}
+.payment {
+    /* border: 2px solid black; */
+    width: 37%;
+    margin-bottom: 20px;
+    height: 77%;
+    margin-left: 5vw;
+}
+p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    /* text-align: left; */
+    color: #000;
+    margin-bottom:  20px;
+}
+i {
+    color:#e6b800
+}
+.heading {
+    margin-top: 150px;
+    text-align: center;
+
+}
+.custom-button {
+}
+.custom-button button {
+    background-color: #e6b800;
+    color:#fff;
+    width: 70px;
+    height: 50px;
+    margin: 30px;
+
+}
+div > button {
+    width: 150px;
+    height: 50px;
+    color: #fff;
+    background-color: #e6b800;
+}
+=======
     width: 100%;
     
     }
@@ -55,3 +109,4 @@
 /* background-color: aqua; */
 font-weight: 600;
     }
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4

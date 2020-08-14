@@ -1,6 +1,45 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import './Donate.css';
+<<<<<<< HEAD
+import Modal from '../../components/Modal/Modal'
+import {FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
+
+const Donate = (props) => {
+    useEffect(() => {
+
+    }, [])
+    
+    return(
+        <>
+            <div className="donate-wrap">
+            
+                <div className='heading'>
+                    <h2>Donate to Covid19GO!</h2>
+                </div>
+                <div className='wrap-two'>
+                    <div className="donate-text">
+                        <i><FaQuoteLeft /></i>
+                        <p>Covid19GO is an independent, non-profit organization passionate about helping covid19 victims all over the world. 
+                                This includes sponsoring victims for proper medical care, providing essentials such as drugs, food items, 
+                                facemask and so much more. 
+                        </p>
+                        <p>We do believe that our contributions will go a long way in kicking covid19 out of our universe. We rely entirely 
+                            on donations and receive no money from any governments or corporations. Our tiny online team ensures even the 
+                            smallest contributions go a long way.
+                        </p>
+                        <p>If you have any questions about how we intend to use funds, 
+                            please feel free to email us here. Our payment process is fully encrypted to 
+                            ensure all information is kept safe us. 
+                            
+                        </p> 
+                       <i><FaQuoteRight  /></i>
+                    </div>
+                    
+                    <div className="payment">
+                        <div>
+                            <button className="btn btn-warning" data-toggle="" data-taget="#paymentModal">Donate</button>
+=======
 import {FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import Success from '../../components/Success/Success';
 
@@ -117,14 +156,29 @@ const Donate = (props) => {
                                 </div>
                             </form>
                             
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
                         </div>
                         
                     </div>
                 </div>
+<<<<<<< HEAD
+                
+            </div>
+            {/* Payment Modal  */}
+            <div data-target="id">
+                <div class="modal-head"></div>
+                <div class="modal-content">
+                    {/* <p>Yes</p> */}
+                </div>
+
+            </div>
+        </>
+=======
             </div> }
 
         </div>
             
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
     )
 }
 export default Donate;

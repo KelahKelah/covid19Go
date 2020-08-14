@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+import React, { useEffect } from 'react';
+import axios from 'axios';
+
+const Login = (props) => {
+
+     const postUrl = "https://lawyerppserver.herokuapp.com/api/auth/authenticate"
+
+=======
 import React, { useState } from 'react';
 import './Login.css';
 // import Donate from '../Donate/Donate';
@@ -9,6 +18,7 @@ const Login = (props) => {
     const handleChange = (e) => {
         e.preventDefault();
     }
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
 
     const handleSubmit = () => {
         if(true) {
@@ -22,8 +32,18 @@ const Login = (props) => {
        
     }
 
+<<<<<<< HEAD
+    useEffect(() => {
+        axios.post(postUrl, {payload: {email: "", password:""}})
+        .then((response) => {
+            console.log('the response', response )
+        })
+    }, []);
+return(     
+=======
     
 return (     
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4
         <>
             <div className="login-wrap">
                     <div className="login-container">

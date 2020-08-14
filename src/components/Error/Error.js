@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+import React from 'react';
+
+const AllError = () => {
+    return(
+        <>
+            Opps! An error just occurred! 
+        </>
+    )
+}
+export default AllError;
+=======
 import  React  from "react";
 import { Link } from "react-router-dom";
 import './Error.css';
@@ -16,3 +28,4 @@ const Errorpage = () => {
     )
 }
 export default Errorpage;
+>>>>>>> 52d6a110f9606782745c3c94b087e306431270d4

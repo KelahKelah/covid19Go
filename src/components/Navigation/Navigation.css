@@ -63,7 +63,7 @@
     color: #0d0d0d;
     font-size: 1em;
 }
-div .item:hover {
+.item:hover {
     color: #e6b800;
 }
 .admin {
