@@ -1,0 +1,50 @@
+.donateWrap {
+  width: 100%;
+}
+.wrapTwo {
+  width: 60%;
+  height: 40%;
+  margin: auto;
+  font-size: 0.7em !important;
+}
+.donateText {
+  margin: auto;
+  font-size: 0.9em;
+  height: 80%;
+}
+.payment {
+  width: 37%;
+  margin: auto;
+  margin-bottom: 40px;
+  height: 20%;
+}
+p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  /* text-align: left; */
+  color: #000;
+  margin-bottom: 20px;
+}
+i {
+  color: #e6b800;
+}
+.heading {
+  margin-top: 50px;
+  text-align: center;
+}
+div > button {
+  width: 150px;
+  height: 50px;
+  color: #fff;
+  background-color: #e6b800;
+}
+.modalContent {
+  padding: auto;
+}
+
+h3 {
+  font-weight: 500;
+}
+.modalTitle {
+  font-weight: 600;
+}

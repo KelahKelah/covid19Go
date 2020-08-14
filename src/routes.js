@@ -6,6 +6,7 @@ import Donate from './pages/Donate/Donate';
 import News from './pages/News/News';
 import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Login';
+import Loader from './components/Loader/Loader';
 import Success from "./components/Success/Success";
 
 const Routes = () => {
@@ -25,7 +26,6 @@ const Routes = () => {
         </BrowserRouter>
         <Footer />
     </Fragment>
-    )
-   
-} 
+  );
+};
 export default Routes;
