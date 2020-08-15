@@ -4,6 +4,7 @@ import Axios from 'axios';
 import './News.css';
 import NewsList from './NewsList';
 import Error from '../../components/Error/Error';
+import {newsUrl} from '../../util/apiCall'
 
 
 const News = () => {

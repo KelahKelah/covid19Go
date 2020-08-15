@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
-import './Donate.css';
+import styles from './Donate.module.css';
 import {FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'
 import Success from '../../components/Success/Success';
 
@@ -38,13 +38,13 @@ const Donate = (props) => {
                 }
     }
     return (
-        <div className="donate-wrap">
+        <div className={styles.donateWrap}>
         
-            <div className='heading'>
+            <div className={styles.heading}>
                 <h2>Donate to Covid19GO!</h2>
             </div>
-            <div className='wrap-two'>
-                <div className="donate-text">
+            <div className={styles.wrapTwo}>
+                <div className={donateText}>
                     
                     <p><i><FaQuoteLeft /></i> Covid19GO is an independent, non-profit organization passionate about helping covid19 victims all over the world. 
                             This includes sponsoring victims for proper medical care, providing essentials such as drugs, food items, 
@@ -61,7 +61,7 @@ const Donate = (props) => {
                     
                 </div>
                 
-                <div className="payment">
+                <div className={payment}>
                     <button type="button" data-toggle="modal" data-target="#paymentModal" className="btn btn-warning" >Donate</button>
                 </div>           
                         
