@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import { FaVine, FaCaretDown, FaUserAlt, FaAlignJustify } from 'react-icons/fa';
-import './Navigation.css';
+import {styles} from './Navigation.module.css';
 
 const Navigation = (props) => {
     // const [toggle, setToggle] = useState()
@@ -17,19 +17,19 @@ const Navigation = (props) => {
     }
     return(        
          <>
-            <div className='nav-wrap'>
-                <div className='logo-brand'>
-                    <p className='logo-label'><FaVine className='logo' />COVID19G0</p>
+            <div className={styles.navContainer}>
+                <div className={styles.logoBrand}>
+                    <p className={styles.logoLabel}><FaVine className={styles.logo} />COVID19G0</p>
                 </div>
-                <div className='wrap'>
-                    <p><Link to='/' className='item'>Home</Link></p>
-                    <p><NavLink to='/news' className='item'>News</NavLink></p>
-                    <p><NavLink to='/donate' className='item'>Donate</NavLink></p>
-                    <p><NavLink to='/contact' className='item'>Contact</NavLink></p>
+                <div className={styles.wrap}>
+                    <p><Link to='/' className={styles.item}>Home</Link></p>
+                    <p><NavLink to='/news' className={styles.item}>News</NavLink></p>
+                    <p><NavLink to='/donate' className={styles.item}>Donate</NavLink></p>
+                    <p><NavLink to='/contact' className={styles.item}>Contact</NavLink></p>
                     {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
                 </div>
                 <div className="admin">
-                    <p><NavLink to='/login' className='item'><FaUserAlt /> </NavLink></p>
+                    <p><NavLink to='/login' className={styles.item}><FaUserAlt /> </NavLink></p>
                 </div>
             </div>
         </>

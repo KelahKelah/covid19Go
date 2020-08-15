@@ -1,4 +1,4 @@
-.news-wrap {
+.newsWrap {
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
     /* overflow: auto; */
 
 }
-.news-wrap-two {
+.newsWrapTwo {
     display: flex;
     width: 80%;
     margin: auto;
@@ -42,7 +42,7 @@ i {
     color: #e6b800;
     font-size: 1.5em;
 }
-.read-more {
+.readMore {
     margin-top: 5px;
 
 }

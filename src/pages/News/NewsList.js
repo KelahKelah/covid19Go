@@ -18,15 +18,15 @@ console.log('checking error after state', error)
 
         const MyAllNews = allNews.length > 0 ? (allNews.map((a, i) => {
             console.log('array of all new: ', allNews)
-            return( <div key={i} className='news-wrap'>
-            <div className='news-wrap-two'>
-                <div className='articles'>
+            return( <div key={i} className={styles.newsWrap}>
+            <div className={styles.newsWrapTwo}>
+                <div className={styles.articles}>
                     <h1><FaGenderless />{a.author}</h1>
                     <span>{a.publishedAt}</span>
                     <h2>{a.title}</h2> 
                     <h3>{a.description}</h3>
-                    <div className='read-more'>
-                        <a className='myLink' href={a.url} target='blank' >Read More</a>
+                    <div className={styles.readMore}>
+                        <a className={styles.myLink} href={a.url} target='blank' >Read More</a>
                         <div>
                             <p>Vote news authenticity</p>
                             <i  onClick={() => setVoteNews(voteNews + 1)} id='vote'><FaRegHeart style={{margin: ' 0px 5px'}} />{voteNews}votes</i>
@@ -34,7 +34,7 @@ console.log('checking error after state', error)
                     </div>
                 </div>
                 <div>
-                    <img src={a.urlToImage} alt='ball' target='blank' className='img' />
+                    <img src={a.urlToImage} alt='ball' target='blank' className={styles.img} />
                 </div>
             </div>
         </div> )

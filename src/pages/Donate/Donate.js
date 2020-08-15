@@ -44,7 +44,7 @@ const Donate = (props) => {
                 <h2>Donate to Covid19GO!</h2>
             </div>
             <div className={styles.wrapTwo}>
-                <div className={donateText}>
+                <div className={styles.donateText}>
                     
                     <p><i><FaQuoteLeft /></i> Covid19GO is an independent, non-profit organization passionate about helping covid19 victims all over the world. 
                             This includes sponsoring victims for proper medical care, providing essentials such as drugs, food items, 
@@ -61,7 +61,7 @@ const Donate = (props) => {
                     
                 </div>
                 
-                <div className={payment}>
+                <div className={styles.payment}>
                     <button type="button" data-toggle="modal" data-target="#paymentModal" className="btn btn-warning" >Donate</button>
                 </div>           
                         
