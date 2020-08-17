@@ -7,20 +7,20 @@ import {
   FaYoutube,
   FaWifi,
 } from "react-icons/fa";
-import "./Footer.css";
+import styles from "./Footer.module.css";
 import "../Navigation/Navigation";
 
 const Footer = () => {
   return (
-    <div className="footer-wrap">
-      <div className="footer-nav row">
-        <div className="footer-logo-brand col-md-6">
-          <p className="footer-logo-label">
-            <FaVine className="footer-logo" />
+    <div className={styles.footerWrap}>
+      <div className={styles.footerNav}>
+        <div className={styles.footerLogoBrand}>
+          <p className={styles.footerLogoLabel}>
+            <FaVine className={styles.footerLogo} />
             COVID19G0
           </p>
         </div>
-        <ul className="col-md-6">
+        <ul className="">
           <i>
             <FaTwitter />
           </i>
@@ -39,10 +39,10 @@ const Footer = () => {
         </ul>
       </div>
 
-      <div className="footer-item">
+      <div className={styles.footerItem}>
         <span>
           <li> Channels</li>
-          <li> News Letters</li>
+          <li> News </li>
           <li> Apps</li>
           <li> Directory</li>
           <li> Apps</li>
@@ -56,13 +56,14 @@ const Footer = () => {
         </span>
         <span>
           <li> Podcasts</li>
-          <li> News Letters</li>
+          <li> News</li>
           <li> Directory</li>
           <li> Channels</li>
           <li> Apps</li>
         </span>
       </div>
     </div>
+
   );
 };
 export default Footer;

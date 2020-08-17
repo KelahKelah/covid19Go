@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Loader from '../../components/Loader/Loader';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
 import Error from "../../components/Error/Error";
+import styles from './News.module.css';
 
 const NewsList = ({ voteNews, setVoteNews, allNews, error, setError, isLoading }) => {
     // const [error, setError] = useState(false);
