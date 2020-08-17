@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-// import { FaRegHeart, FaGenderless } from 'react-icons/fa';
 import styles from './News.module.css';
 import NewsList from './NewsList';
 import Error from '../../components/Error/Error';

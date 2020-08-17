@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, NavLink, withRouter } from 'react-router-dom';
 import { FaVine, FaCaretDown, FaUserAlt, FaAlignJustify } from 'react-icons/fa';
-import {styles} from './Navigation.module.css';
+import  styles  from './Navigation.module.css';
 
 const Navigation = (props) => {
     // const [toggle, setToggle] = useState()
@@ -28,9 +28,12 @@ const Navigation = (props) => {
                     <p><NavLink to='/contact' className={styles.item}>Contact</NavLink></p>
                     {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
                 </div>
-                <div className="admin">
+                <div className={styles.admin}>
                     <p><NavLink to='/login' className={styles.item}><FaUserAlt /> </NavLink></p>
-                </div>
+                </div>    
+                <div className={styles.menu}>
+                    <p className={styles.item}><FaAlignJustify /> </p>
+                </div>   
             </div>
         </>
     )

@@ -1,14 +1,16 @@
 .homeWrapper {
-  height: 1000px;
+  height: 450px;
+  /* background-color: chartreuse; */
 }
 .homeContainer {
   background-color: #133913;
   width: 30%;
-  height: 50%;
+  height: 80%;
   margin: 50px auto;
   text-align: center;
   font-weight: bold;
   font-size: large;
+  /* background-color: chocolate; */
 }
 .title {
   color: #eec800;
