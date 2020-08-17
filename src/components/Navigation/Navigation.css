@@ -1,4 +1,4 @@
-.nav-wrap {
+.navContainer {
     display: flex;
     width: 100%;
     background-color: #fff;
@@ -47,7 +47,7 @@
     left: 30%;
     text-align: center;
 }
-.logo-brand {
+.logoBrand {
     width: 20%;
     height: 50%;
     display: flex;
@@ -58,7 +58,7 @@
     color: #e6b800;
     /* color: #cca300; */
 }
-.logo-label {
+.logoLabel {
     font-Weight: bold;
     color: #0d0d0d;
     font-size: 1em;
@@ -79,7 +79,7 @@
       float: right;
       display: block;
     }
-    .logo-brand {
+    .logoBrand {
         display: none;
     }
     /* .nav-wrap {
