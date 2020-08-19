@@ -16,18 +16,13 @@ const News = () => {
     useEffect(() => {
         Axios.get(newsUrl)
         .then(res => {
-            var i;
-            console.log('the response is', res)
+            console.log('The second endpoint res is :', res.data.news[1])
             // setIsLoading(true)
-            console.log('the index is :', res.data.articles[i])
             setIsLoading(false)
             if(res.status === 200) {
                 // setIsLoading(false)
-                setNews({ allNews: res.data.articles.slice(0, 11)})
-                // setNews({ allNews: res.data.articles.slice(0, 11), title: res.data.articles[1].title})
+                setNews({ allNews: res.data.news[1]})
                 setVoteNews(3)
-                console.log('Response data', res.data.articles)
-                // console.log('Response data', res.data.articles.description)
             } 
         })
             .catch((error) => {
@@ -42,18 +37,15 @@ const News = () => {
     return error ? <Error /> : (<>
     <>
             <NewsList 
+                news={news}
                 error={error}
                 setError={setError}
                 setVoteNews={setVoteNews}
                 voteNews={voteNews}
-                news={news.id}
-                allNews={news.allNews} 
+                // news={news.id}
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
-                setVoteNews={setVoteNews}
-                voteNews={voteNews}
-                news={news.id}
-                allNews={news.allNews}
+                // news={news.id}
             />
         </>
     </>)

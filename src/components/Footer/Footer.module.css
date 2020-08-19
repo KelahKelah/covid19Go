@@ -1,7 +1,6 @@
 .footerWrap {
     width: 100%;
     margin-top: auto;
-  
     /* background-color: blueviolet; */
 }
 .footerNav {
@@ -23,7 +22,14 @@
     font-size: 0.7em;
 }
 .footerLogoBrand {
-    height: 50%;
+    /* height: 50%; */
+    width: 20%;
+    height: 70%;
+    display: flex;
+
+    font-Weight: bold;
+    color: #0d0d0d;
+    font-size: 0.9em;
 }
 .footerLogo {
     font-size: 1.2em;
@@ -41,7 +47,6 @@ ul {
     padding: 0%;   
     /* background-color: chartreuse; */
     overflow: hidden;
-
 }
 ul > i {
     margin: 0px 10px;

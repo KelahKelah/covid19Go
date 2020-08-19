@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 import Login from './pages/Login/Login';
 import Loader from './components/Loader/Loader';
 import Success from "./components/Success/Success";
+import Contact from './pages/Contact/Contact';
 
 const Routes = () => {
     return(
@@ -19,6 +20,7 @@ const Routes = () => {
                     <Route exact path='/home' component={Home} />
                     <Route exact path='/donate' component={Donate} />
                     <Route exact path='/news' component={News} />
+                    <Route exact path='/contact' component={Contact} />
                     <Route exact path='/login' component={Login} />
                     <Route exact path='/success' component={Success} />
                     {/* <Route exact path="/Donate/:checkoutId" component={Checkout} /> */}

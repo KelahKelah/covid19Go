@@ -17,7 +17,27 @@ const Navigation = (props) => {
   };
   return toggle ? (
     <div className={styles.sideNav}>
-
+        <p>
+          <Link to="/" className={styles.sideNavItem}>
+            Home
+          </Link>
+        </p>
+        <p>
+          <NavLink to="/news" className={styles.sideNavItem}>
+            News
+          </NavLink>
+        </p>
+        <p>
+          <NavLink to="/donate" className={styles.sideNavItem}>
+            Donate
+          </NavLink>
+        </p>
+        <p>
+          <NavLink to="/contact" className={styles.sideNavItem}>
+            Contact
+          </NavLink>
+        </p>
+        {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
     </div>
   ) : (
     <div className={styles.navContainer}>
@@ -57,6 +77,8 @@ const Navigation = (props) => {
           </NavLink>
         </p>
       </div>
+      
+      {/* Displays the sidebar menu onclick  */}
       <div className={styles.menu}>
         <p
           className={styles.item}
