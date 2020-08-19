@@ -1,27 +1,23 @@
 .newsWrap {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    /* height: 100vh; */
+    background-color: chocolate;
+    width: 1440px;
+    margin: auto;
     margin-top: 90px;
-    /* margin-bottom: 330px; */
-    /* overflow: auto; */
-
+    
 }
 .newsWrapTwo {
+    background-color: cornflowerblue;
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
-/* .wrap-boss {
-    padding: ;
-} */
 .articles h1 {
     display: inline;
-    color: #e6b800
+    color: #e6b800;
 }
 .articles {
-    width: 40vw;
+    background-color: cornsilk;
+    width: 45%;
     height: 30%;
     margin: 30px 0px;
 
@@ -44,11 +40,13 @@ i {
 }
 .readMore {
     margin-top: 5px;
-
 }
-.img {
-    width: 30vw;
-    height: 30vh;
+.mainImage {
+    background-image: url("../../assets/covid19.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 45% !important;
+    height: 40%;
     padding-left: 5vw;
     margin: 40px 0px;
 }

@@ -7,10 +7,10 @@ import {newsUrl} from '../../util/apiCall'
 
 
 const News = () => {
-    const [news, setNews] = useState({ allNews: [], title: '', author: '', publishedAt: '', description: '', url: '', urlToImage: ''})
+    const [news, setNews] = useState({ allNews: [] })
     const [voteNews, setVoteNews] = useState(0)
     const [error, setError] = useState(false)
-    const [isLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(true)
     // const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
@@ -18,34 +18,36 @@ const News = () => {
         .then(res => {
             console.log('The second endpoint res is :', res.data.news[1])
             // setIsLoading(true)
-            setIsLoading(false)
+            // setIsLoading(false)
             if(res.status === 200) {
                 // setIsLoading(false)
-                setNews({ allNews: res.data.news[1]})
+                console.log('The second endpoint res is :','1')
+                setNews({ allNews: res.data.news.slice(0, 15)})
                 setVoteNews(3)
+                setError(false)
+                console.log('The second endpoint res is :', '2')
             } 
         })
             .catch((error) => {
+                console.log("checking my error" , error)
                 if(error.status == "error") {
                     setError(true)
-                    // console.log("checking my error" , error)
+                    console.log("checking my error" , error)
                 }
             })
     
     }, []);
-
+console.log('news error ', error)
     return error ? <Error /> : (<>
     <>
             <NewsList 
-                news={news}
+                news={news.allNews}
                 error={error}
                 setError={setError}
                 setVoteNews={setVoteNews}
                 voteNews={voteNews}
-                // news={news.id}
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
-                // news={news.id}
             />
         </>
     </>)
