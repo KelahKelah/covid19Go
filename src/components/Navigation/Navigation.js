@@ -5,6 +5,8 @@ import styles from "./Navigation.module.css";
 
 const Navigation = (props) => {
   const [toggle, setToggle] = useState(false);
+  // const [close, setClose] = useState(false);
+
   // useEffect() {
   // }
   const OpenNav = () => {
@@ -17,6 +19,7 @@ const Navigation = (props) => {
   };
   return toggle ? (
     <div className={styles.sideNav}>
+        <div  className={`close ${styles.buttonClose}`} onClick={()=>{setToggle(false)}} >&times;</div>
         <p>
           <Link to="/" className={styles.sideNavItem}>
             Home

@@ -1,58 +1,85 @@
 .newsWrap {
-    background-color: chocolate;
-    width: 1440px;
-    margin: auto;
-    margin-top: 90px;
+    background-color: #fff;
+    width: 70%;
+    margin: 60px auto;
+    display: flex;
     
 }
-.newsWrapTwo {
-    background-color: cornflowerblue;
-    display: flex;
-    width: 100%;
-    margin: auto;
-}
-.articles h1 {
+.article h1 {
     display: inline;
     color: #e6b800;
 }
-.articles {
-    background-color: cornsilk;
-    width: 45%;
-    height: 30%;
-    margin: 30px 0px;
-
+.article {
+    width: 50%;
+    margin: 30px 20px;
+}
+.date {
+    font-size: 0.8em;
+    font-style: italic;
+    margin: 2% 2%;
+    /* background-color: aqua; */
+}
+.excerpt {
+    font-size: 0.9em;
+    width: 450px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.voteText {
+    font-size: 0.8em;
+}
+#vote {
+    font-size: 0.8em;
+    border-radius: 50%;
+}
+.title {
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 0em;
+    height: 50%;
+}
+.image {
+    background-repeat: no-repeat;
+    background-position: right center;
+    height: auto;
+    max-width: 95%;
+    padding-left: 5vw;
+    margin: 40px 0px;
 }
 div > h3 {
     color: #737373;
 }
 span {
     color:#999999;
-    /* width: 150% */
+}
+h3 {
+    background-color: yellow;
+}
+.icon {
+    background-color: #e6b800;
 }
 .myLink {
     background-color: #856114;
-    padding: 10px;
+    font-size: 0.8em;
+    margin: 5% 0%;
+    border-radius: 3px;
+    padding: 8px;
     color: #fff;
 }
 i {
     color: #e6b800;
-    font-size: 1.5em;
+    font-size: 1em;
 }
 .readMore {
     margin-top: 5px;
-}
-.mainImage {
-    background-image: url("../../assets/covid19.jpg");
-    background-repeat: no-repeat;
-    background-position: right center;
-    width: 45% !important;
-    height: 40%;
-    padding-left: 5vw;
-    margin: 40px 0px;
 }
 div a {
     text-decoration: none;
 }
 div p {
     color: #666666;
+}
+.flag {
+    font-size: 0.6em;
 }

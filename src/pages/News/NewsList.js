@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { FaRegHeart, FaHeart, FaGenderless } from 'react-icons/fa';
+import Img from '../../assets/covid19.jpg'
 import Error from "../../components/Error/Error";
-import Loader from '../../components/Loader/Loader'
+import Loader from '../../components/Loader/Loader';
 import styles from './News.module.css';
 
 const NewsList = ({ voteNews, setVoteNews, news, newsId, error, setError, isLoading }) => {
     // const [error, setError] = useState();
-// console.log('newslist all news is : ', newsId)
 console.log('newslist all news is : ', news)
-// console.log('checking error after state', error)
 
     useEffect(() => {
         if(news.length === 0) {
@@ -18,30 +17,29 @@ console.log('newslist all news is : ', news)
         setVoteNews(3)
     }, []);
 
-        const MyAllNews = news.length > 0 ? (news.map((a, i) => {
+        const allNews = news.length > 0 ? (news.map((all, i) => {
             console.log('array of all new: ', news)
             return( 
                 <div key={i} className={styles.newsWrap}>
-                    <div className={styles.newsWrapTwo}>
-                        <div className={styles.articles}>
-                            <h1><FaGenderless />{a.title}</h1>
-                            <span>{a.provider.name}</span>
-                            <span>{a.path}</span>
-                            <h2>{a.excerpt}</h2> 
-                            {/* <h3>{a.description}</h3> */}
-                            <div className={styles.readMore}>
-                                <a className={styles.myLink} href={a.webUrl} target='blank' >Read More</a>
-                                <div>
-                                    <p>Vote news authenticity</p>
-                                    <i  onClick={() => setVoteNews(voteNews + 1)} id='vote'><FaRegHeart style={{margin: ' 0px 5px'}} />{voteNews}votes</i>
-                                </div>
+                        <div className={styles.article}>
+                            <div className={`${styles.flag} d-flex`}>
+                                <p><FaGenderless className={styles.icon} />{all.provider.name}</p>
+                                <p className={styles.date}>{all.publishedDateTime}</p>
+                            </div>
+                            <div>
+                                <h1 className={styles.title}>{all.title}</h1>
+                                <h2 className={styles.excerpt}>{all.excerpt}</h2> 
+                                <a href={all.webUrl} target='blank' className={styles.myLink}>Read more</a>
+                            </div>
+                            <div className={`d-flex`}>
+                                <p onClick={() => setVoteNews(voteNews + 1)} id={styles.vote} ><FaRegHeart className={styles.icon} />{voteNews}votes</p>
+                                <p className={styles.voteText}>Vote news authenticity </p>
                             </div>
                         </div>
                         <div>
-                            <div className={styles.mainImage}></div>
+                            <img src={Img} alt="" className={styles.image} />
                         </div>
                 </div>
-            </div>
              )
         }))
         : (isLoading ?  <Loader /> : null )
@@ -50,7 +48,7 @@ console.log('newslist all news is : ', news)
     return error ? (
      <Error /> 
      )  : (
-        <div className='wrap-boss'>{MyAllNews}</div>
+        <div className='wrap-boss'>{allNews}</div>
     )
   
 }

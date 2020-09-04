@@ -8,7 +8,7 @@ const Success = ({fullName}) => {
         <div id="notfound">
             <div className="notfound">
                 <h2>Yay!{fullName}</h2>
-                <h2>Payment was successful!</h2>
+                <h2>Successful!</h2>
                 <p>Click <Link to="/home">here</Link>to go back to the home page</p>
             </div>
 	    </div>

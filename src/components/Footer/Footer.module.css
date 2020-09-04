@@ -1,6 +1,6 @@
 .footerWrap {
     width: 100%;
-    margin-top: auto;
+    margin-top: 2% auto;
     /* background-color: blueviolet; */
 }
 .footerNav {
@@ -17,7 +17,7 @@
     color: #f2f3f3;
     height: 35%;
     width: 90%;
-    margin: auto;
+    margin: 0% auto 1.5%;
     /* background-color: aqua; */
     font-size: 0.7em;
 }
