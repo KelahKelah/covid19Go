@@ -1,13 +1,20 @@
 .login-wrap {
-    /* background-color: yellow; */
     width: 100%;
-    /* margin-top: 75px; */
 }
 .login-container {
     width: 40%;
-    margin: 5% auto;
-    /* background-color: aqua; */
+    margin: 2% auto;
 }
-p {
+.login-text {
     text-align: center;
+    font-size: 0.9em;
+    font-family: 'Tangerine', serif;
+}
+input {
+    background-color: #fff;
+}
+@media screen and (max-width: 796px) {
+    .login-container {
+        width:  90%;
+    }
 }

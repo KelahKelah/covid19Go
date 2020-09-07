@@ -28,7 +28,7 @@
     display: flex;
 
     font-Weight: bold;
-    color: #0d0d0d;
+    color: #333;
     font-size: 0.9em;
 }
 .footerLogo {
@@ -37,7 +37,7 @@
 }
 .footerLogoLabel {
     font-Weight: bold;
-    color: #000;
+    color: #fff;
 }
 ul {
     display: flex;

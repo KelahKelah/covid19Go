@@ -26,18 +26,11 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-.voteText {
-    font-size: 0.8em;
-}
-#vote {
-    font-size: 0.8em;
-    border-radius: 50%;
-}
+
 .title {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 600;
-    line-height: 0em;
-    height: 50%;
+   
 }
 .image {
     background-repeat: no-repeat;
@@ -56,7 +49,7 @@ span {
 h3 {
     background-color: yellow;
 }
-.icon {
+.iconRing {
     background-color: #e6b800;
 }
 .myLink {
@@ -74,6 +67,9 @@ i {
 .readMore {
     margin-top: 5px;
 }
+.iconLike, .voteText, #vote {
+    font-size: 0.6em;
+}
 div a {
     text-decoration: none;
 }
@@ -82,4 +78,13 @@ div p {
 }
 .flag {
     font-size: 0.6em;
+}
+
+@media screen and (max-width: 769px) {
+    .newsArea {
+        width: 450px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }
