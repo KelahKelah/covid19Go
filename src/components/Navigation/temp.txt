@@ -1,22 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink, withRouter } from "react-router-dom";
-import { FaVine, FaUserAlt, FaAlignJustify } from "react-icons/fa";
-import styles from "./Navigation.module.css";
 
-const Navigation = (props) => {
-  const [toggle, setToggle] = useState(false);
-  
-  const OpenNav = () => {
-    const myLoop = document.querySelectorAll(".item");
-    var i;
-    for (i = 0; i < myLoop.length; i++) {
-      console.log(myLoop[i]);
-      myLoop[i].style.display = "block";
-    }
-  };
-  return toggle ? (
-    <div className={styles.sideNav}>
-        <div  className={`close ${styles.buttonClose}`} onClick={()=>{setToggle(false)}} >&times;</div>
+
+  {return toggle ? (
+    <div id={styles.myId}>
+        <div className={`close ${styles.buttonClose}`} onClick={()=>{setToggle(false)}} >&times;</div>
         <p>
           <Link to="/" className={styles.sideNavItem}>
             Home
@@ -83,7 +69,7 @@ const Navigation = (props) => {
         <p
           className={styles.item}
           onClick={() => {
-            setToggle(true);
+            slider()
           }}
         >
           <FaAlignJustify />{" "}
@@ -93,4 +79,3 @@ const Navigation = (props) => {
   );
 };
 // withRouter for props.history.push of logout
-export default withRouter(Navigation);

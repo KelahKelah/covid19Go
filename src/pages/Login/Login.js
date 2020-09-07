@@ -12,7 +12,6 @@ const Login = (props) => {
 
     const handleSubmit = () => {
         if(true) {
-            // props.history.push('/Home')
             props.history.push({
                 pathname:'/home',
                 state:"testing"
@@ -27,7 +26,7 @@ return (
         <>
             <div className="login-wrap">
                     <div className="login-container">
-                    <p>Login as Admin</p>
+                    <h4 className="login-text">Login as Admin</h4>
                     <form className="mt-4" onSubmit={handleSubmit}>
                         <div className="form-group">
                         <label htmlFor="exampleInputEmail1">Email</label>

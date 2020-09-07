@@ -32,8 +32,6 @@ const Home = () => {
           discharged: res.data.recovered,
           death: res.data.deceased,
         });
-        // console.log('res.response data', res)
-        // console.log('Single data', res.data.infected, res.data.recovered, res.data.deceased)
       } else {
         setError(true);
       }

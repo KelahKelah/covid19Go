@@ -3,7 +3,8 @@
   /* background-color: chartreuse; */
 }
 .homeContainer {
-  background-color: #133913;
+  /* background-color: #133913; */
+  background-color: #fff;
   width: 30%;
   height: 90%;
   margin: 50px auto;
@@ -26,7 +27,8 @@
   /* background-color: blanchedalmond; */
 }
 #date {
-  color: #fff;
+  /* color: #fff; */
+  color: #333;
 }
 .item {
   display: flex;
@@ -108,6 +110,6 @@
     font-size: 1.5rem;
   }
   .homeContainer {
-    width: 90%;
+    width: 100%;
   }
 }

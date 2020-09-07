@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import '';
 
 const Contact = (props) => {
   const [inputs, setInputs] = useState({
@@ -28,7 +27,7 @@ const Contact = (props) => {
     <>
       <div className="login-wrap">
         <div className="login-container">
-          <p>Get in touch </p>
+          <h4 className="login-text">Get in touch </h4>
           <form className="mt-4" onSubmit={handleSubmit}>
             <div className="form-group">
               {/* <label htmlFor="exampleInputEmail1">Full name</label> */}
