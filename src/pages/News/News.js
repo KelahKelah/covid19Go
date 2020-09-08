@@ -26,7 +26,7 @@ const News = () => {
                     setError(true)
                     console.log('status check is correct')
                 } else {
-                    console.log('status check is wrong')
+                    console.log('status check is incorrect')
                 }
             })
     

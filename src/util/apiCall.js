@@ -5,5 +5,6 @@ const baseUrl = `${local}`;
 const newsApiKey = '11583d075b4e49aaacfeaf43f6d5706'
 
 
-export { newsUrl }
+export { newsUrl, baseUrl, newsApiKey, local}
 
+ 
