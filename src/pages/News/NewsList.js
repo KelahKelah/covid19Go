@@ -5,7 +5,7 @@ import Error from "../../components/Error/Error";
 import Loader from '../../components/Loader/Loader';
 import styles from './News.module.css';
 
-const NewsList = ({ voteNews, setVoteNews, news, newsId, error, setError, isLoading }) => {
+const NewsList = ({ voteNews, setVoteNews, news, error, isLoading }) => {
 
     useEffect(() => {
         if(news.length === 0) {
