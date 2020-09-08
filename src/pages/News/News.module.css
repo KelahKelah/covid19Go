@@ -3,11 +3,9 @@
     width: 70%;
     margin: 60px auto;
     display: flex;
-    
 }
-.article h1 {
+.article {
     display: inline;
-    color: #e6b800;
 }
 .article {
     width: 50%;
@@ -16,21 +14,21 @@
 .date {
     font-size: 0.8em;
     font-style: italic;
-    margin: 2% 2%;
+    margin: 1.5% 2%;
     /* background-color: aqua; */
 }
 .excerpt {
-    font-size: 0.9em;
-    width: 450px;
+    font-size: 0.7em;
+    /* width: 100%; */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    
 }
-
 .title {
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 600;
-   
+    color: #e6b800;
 }
 .image {
     background-repeat: no-repeat;
@@ -46,16 +44,16 @@ div > h3 {
 span {
     color:#999999;
 }
-h3 {
-    background-color: yellow;
+.voteArea {
+    margin-top: 4%;
 }
 .iconRing {
-    background-color: #e6b800;
+    color: #e6b800;
 }
 .myLink {
     background-color: #856114;
-    font-size: 0.8em;
-    margin: 5% 0%;
+    font-size: 0.7em;
+    /* margin: 5% 0%; */
     border-radius: 3px;
     padding: 8px;
     color: #fff;
@@ -80,7 +78,7 @@ div p {
     font-size: 0.6em;
 }
 
-@media screen and (max-width: 769px) {
+@media (min-width: 321px) and (max-width: 769px) {
     .newsArea {
         width: 450px;
         overflow: hidden;
@@ -88,3 +86,10 @@ div p {
         white-space: nowrap;
     }
 }
+
+@media screen and (max-width: 321px) {
+    .date, .name {
+        display: none;
+    }
+}
+

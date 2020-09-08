@@ -27,6 +27,8 @@
     width: 20%;
     height: 70%;
     display: flex;
+    
+  
 }
 .logo {
     font-size: 1.2em;
@@ -46,10 +48,12 @@ div .item:hover {
     width: 5%;
 }   
 /* removing menu for desktop view  */
-.menu {
+.handburger {
+    /* position: fixed; */
     position: relative;
-    left: 15%;
+    left: 60vw;
     display: none;
+    
 }
 .sideNav {
     width: 40%;
@@ -83,20 +87,14 @@ div .item:hover {
     text-align: center;
 }
 @media screen and (max-width: 769px) {
-    .wrap .item {
+    .wrap, .admin {
     display: none;
     }
-    .admin .item {
-        display: none;
-    }
-    .menu {
+    .handburger {
         display: block;
     }
-    .logoBrand {
-        display: none;
-    }
     .logoLabel {
-        display: none;
+        font-size: 0.7em;
     }
     .navContainer {
         width: 100%;

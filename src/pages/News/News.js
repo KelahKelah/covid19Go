@@ -15,20 +15,23 @@ const News = () => {
         Axios.get(newsUrl)
         .then(res => {
             if(res.status === 200) {
+                console.log('the response is ',res)
                 setNews({ allNews: res.data.news.slice(0, 15)})
                 setVoteNews(3)
-                setError(false)
             } 
         })
             .catch((error) => {
-                if(error.status == "error") {
+                console.log(error.response)
+                if(error.response.status === 401) {
                     setError(true)
+                    console.log('status check is correct')
+                } else {
+                    console.log('status check is incorrect')
                 }
             })
     
     }, []);
-    return error ? <Error /> : (<>
-    <>
+    return error ? <Error /> : (
             <NewsList 
                 news={news.allNews}
                 error={error}
@@ -38,7 +41,6 @@ const News = () => {
                 isLoading={isLoading}
                 setIsLoading={setIsLoading}
             />
-        </>
-    </>)
+    )
 }
 export default News;

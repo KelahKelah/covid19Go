@@ -6,8 +6,8 @@ import styles from "./Navigation.module.css";
 const Navigation = (props) => {
   const [toggle, setToggle] = useState(false);
   
-  const OpenNav = () => {
-    const myLoop = document.querySelectorAll(".item");
+  const slideSideBar = () => {
+    const myLoop = document.querySelector(".item");
     var i;
     for (i = 0; i < myLoop.length; i++) {
       console.log(myLoop[i]);
@@ -79,7 +79,7 @@ const Navigation = (props) => {
       </div>
       
       {/* Displays the sidebar menu onclick  */}
-      <div className={styles.menu}>
+      <div className={styles.handburger}>
         <p
           className={styles.item}
           onClick={() => {

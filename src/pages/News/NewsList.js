@@ -5,7 +5,7 @@ import Error from "../../components/Error/Error";
 import Loader from '../../components/Loader/Loader';
 import styles from './News.module.css';
 
-const NewsList = ({ voteNews, setVoteNews, news, newsId, error, setError, isLoading }) => {
+const NewsList = ({ voteNews, setVoteNews, news, error, isLoading }) => {
 
     useEffect(() => {
         if(news.length === 0) {
@@ -18,7 +18,7 @@ const NewsList = ({ voteNews, setVoteNews, news, newsId, error, setError, isLoad
                 <div key={i} className={styles.newsWrap}>
                         <div className={styles.article}>
                             <div className={`${styles.flag} d-flex`}>
-                                <p><FaGenderless className={styles.iconRing} />{all.provider.name}</p>
+                                <p className={styles.name}><FaGenderless className={styles.iconRing} />{all.provider.name}</p>
                                 <p className={styles.date}>{all.publishedDateTime}</p>
                             </div>
                             <div className={styles.newsArea}>
@@ -26,7 +26,7 @@ const NewsList = ({ voteNews, setVoteNews, news, newsId, error, setError, isLoad
                                 <h2 className={styles.excerpt}>{all.excerpt}</h2> 
                                 <a href={all.webUrl} target='blank' className={styles.myLink}>Read more</a>
                             </div>
-                            <div className={`d-flex`}>
+                            <div className={`d-flex ${styles.voteArea}`}>
                                 <p onClick={() => setVoteNews(voteNews + 1)} id={styles.vote} ><FaRegHeart className={styles.iconLike} />{voteNews} Votes</p>
                                 <p className={styles.voteText}>Vote news authenticity </p>
                             </div>
