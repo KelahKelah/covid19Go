@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import styles from "./Home.module.css";
 import Loader from "../../components/Loader/Loader";
-// import { baseUrl } from '../../util/apiCall'
+import { statisticsApiUrl } from '../../util/apiCall'
 
-// const GoogleMapApikey = 'AIzaSyC0Cq0grSLW5T4wMwT8aXIyokN1mYT_XHA'
-const url =
-  "https://api.apify.com/v2/key-value-stores/Eb694wt67UxjdSGbc/records/LATEST?disableRedirect=true";
+
 const Home = () => {
   const [statistic, setStatistic] = useState({
     confirmed: 0,
@@ -21,7 +19,7 @@ const Home = () => {
 
   useEffect(() => {
     // testing API
-    axios.get(url).then((res) => {
+    axios.get(statisticsApiUrl).then((res) => {
       setIsLoading(false);
       setCurrentDate({ date: myDate });
       console.log(myDate);
