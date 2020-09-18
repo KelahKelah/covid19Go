@@ -53,7 +53,6 @@ div .item:hover {
     position: relative;
     left: 60vw;
     display: none;
-    
 }
 .sideNav {
     width: 40%;
@@ -61,11 +60,17 @@ div .item:hover {
     background-color: #fff;
     /* background-color: #e3e3e3; */
     align-items: center;
+    z-index: 10;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 0%;
+    /* left: 0%; */
     left: 60%;
-    transition: left 3s ease; 
+    transition:10s ; 
+}
+.slideLeft {
+    /* left: 60%; */
+    right: 40%;
 }
 .sideNavItem {
     font-size: 0.8em;

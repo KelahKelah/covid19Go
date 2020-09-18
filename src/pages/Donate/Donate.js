@@ -113,7 +113,7 @@ const Donate = (props) => {
                                     <input type="number" name="amount" value={inputs.amount} onChange={handleInputs} required />
                                 </div>
                                 <div className="modal-footer">
-                                    <button type="submit" className="btn btn-warning">Pay</button>
+                                    <button type="submit" className={`btn btn-primary ${styles.payButton}`}>Pay</button>
                                 </div>
                             </form>
                             

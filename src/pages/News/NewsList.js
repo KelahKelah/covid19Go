@@ -6,6 +6,7 @@ import Loader from '../../components/Loader/Loader';
 import styles from './News.module.css';
 
 const NewsList = ({ voteNews, setVoteNews, news, error, isLoading }) => {
+    // const [change, setChange] 
 
     useEffect(() => {
         if(news.length === 0) {
@@ -27,7 +28,7 @@ const NewsList = ({ voteNews, setVoteNews, news, error, isLoading }) => {
                                 <a href={all.webUrl} target='blank' className={styles.myLink}>Read more</a>
                             </div>
                             <div className={`d-flex ${styles.voteArea}`}>
-                                <p onClick={() => setVoteNews(voteNews + 1)} id={styles.vote} ><FaRegHeart className={styles.iconLike} />{voteNews} Votes</p>
+            <p onClick={() => setVoteNews(voteNews + 1)} id={styles.vote} >{voteNews + 1 ? <FaHeart className={styles.iconLike} /> : <FaRegHeart className={styles.iconLike} /> } {voteNews} Votes</p>
                                 <p className={styles.voteText}>Vote news authenticity </p>
                             </div>
                         </div>

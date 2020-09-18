@@ -6,39 +6,45 @@ import styles from "./Navigation.module.css";
 const Navigation = (props) => {
   const [toggle, setToggle] = useState(false);
   
-  const slideSideBar = () => {
-    const myLoop = document.querySelector(".item");
-    var i;
-    for (i = 0; i < myLoop.length; i++) {
-      console.log(myLoop[i]);
-      myLoop[i].style.display = "block";
-    }
-  };
+  // const slider = () => {
+  //   const myLoop = document.querySelector(".item");
+  //   var i;
+  //   for (i = 0; i < myLoop.length; i++) {
+  //     console.log(myLoop[i]);
+  //     myLoop[i].style.display = "block";
+  //   }
+  // };
+
+  let slider = 'sideNav';
+  if(toggle) {
+    slider = 'slideLeft' 
+  }
+
   return toggle ? (
-    <div className={styles.sideNav}>
-        <div  className={`close ${styles.buttonClose}`} onClick={()=>{setToggle(false)}} >&times;</div>
-        <p>
-          <Link to="/" className={styles.sideNavItem}>
-            Home
-          </Link>
-        </p>
-        <p>
-          <NavLink to="/news" className={styles.sideNavItem}>
-            News
-          </NavLink>
-        </p>
-        <p>
-          <NavLink to="/donate" className={styles.sideNavItem}>
-            Donate
-          </NavLink>
-        </p>
-        <p>
-          <NavLink to="/contact" className={styles.sideNavItem}>
-            Contact
-          </NavLink>
-        </p>
-        {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
-    </div>
+        <div className={styles.sideNav}>
+          <div  className={`close ${styles.buttonClose}`} onClick={()=>{setToggle(false)}} >&times;</div>
+          <p>
+            <Link to="/" className={styles.sideNavItem}>
+              Home
+            </Link>
+          </p>
+          <p>
+            <NavLink to="/news" className={styles.sideNavItem}>
+              News
+            </NavLink>
+          </p>
+          <p>
+            <NavLink to="/donate" className={styles.sideNavItem}>
+              Donate
+            </NavLink>
+          </p>
+          <p>
+            <NavLink to="/contact" className={styles.sideNavItem}>
+              Contact
+            </NavLink>
+          </p>
+          {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
+      </div>
   ) : (
     <div className={styles.navContainer}>
       <div className={styles.logoBrand}>

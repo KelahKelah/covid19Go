@@ -53,7 +53,10 @@ div > button {
 .modalContent {
   padding: auto;
 }
-
+.payButton {
+  box-shadow: 2px 5px 10px #333;
+  
+}
 h3 {
   font-weight: 500;
 }
