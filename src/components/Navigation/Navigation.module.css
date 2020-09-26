@@ -27,8 +27,6 @@
     width: 20%;
     height: 70%;
     display: flex;
-    
-  
 }
 .logo {
     font-size: 1.2em;
@@ -47,29 +45,35 @@ div .item:hover {
     left: 25%;
     width: 5%;
 }   
-/* removing menu for desktop view  */
-.handburger {
-    /* position: fixed; */
+/* sets hamburger to display to remove for desktop view  */
+.hamburger {
     position: relative;
     left: 60vw;
     display: none;
 }
 .sideNav {
-    width: 40%;
+    width: 50%;
     height: 70%;
     background-color: #fff;
-    /* background-color: #e3e3e3; */
     align-items: center;
     z-index: 10;
     position: fixed;
     top: 0;
     right: 0%;
-    /* left: 0%; */
-    left: 60%;
-    transition:10s ; 
+    left: 50%;
+
+    transition: 5s ; 
+}
+
+.sideNav:hover {
+    left: 100%;
+
+}
+
+.sideNav:hover .hamburger {
+    background-color: blue;
 }
 .slideLeft {
-    /* left: 60%; */
     right: 40%;
 }
 .sideNavItem {
@@ -79,9 +83,7 @@ div .item:hover {
     font-weight: bold;
     text-decoration: none !important; 
 }
-.sideNav:hover {
-    color: #e6b800
-}
+
 .buttonClose {
     border: #808080 1px solid;
     border-radius: 50%;
@@ -95,7 +97,7 @@ div .item:hover {
     .wrap, .admin {
     display: none;
     }
-    .handburger {
+    .hamburger {
         display: block;
     }
     .logoLabel {

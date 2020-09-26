@@ -6,8 +6,6 @@ import Loader from '../../components/Loader/Loader';
 import styles from './News.module.css';
 
 const NewsList = ({ voteNews, setVoteNews, news, error, isLoading }) => {
-    // const [change, setChange] 
-
     useEffect(() => {
         if(news.length === 0) {
         }

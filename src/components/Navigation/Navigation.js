@@ -20,6 +20,7 @@ const Navigation = (props) => {
     slider = 'slideLeft' 
   }
 
+  // Display sidebar  for mobile if toggle is true 
   return toggle ? (
         <div className={styles.sideNav}>
           <div  className={`close ${styles.buttonClose}`} onClick={()=>{setToggle(false)}} >&times;</div>
@@ -84,8 +85,8 @@ const Navigation = (props) => {
         </p>
       </div>
       
-      {/* Displays the sidebar menu onclick  */}
-      <div className={styles.handburger}>
+      {/* Hamburger icon which displays the sidebar menu onclick  */}
+      <div className={styles.hamburger}>
         <p
           className={styles.item}
           onClick={() => {
@@ -95,6 +96,7 @@ const Navigation = (props) => {
           <FaAlignJustify />{" "}
         </p>
       </div>
+
     </div>
   );
 };
