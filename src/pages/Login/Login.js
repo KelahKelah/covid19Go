@@ -51,11 +51,6 @@ return (
                         >
                             Sign in
                         </button>
-                        {/* {isLoading === "yes" ? (
-                            <Loader />
-                        ) : isLoading === "error" ? (
-                            <small>Something went wrong, refresh</small>
-                        ) : null} */}
                         </div>
                     </form>
                     </div>
