@@ -15,19 +15,21 @@ const News = () => {
         Axios.get(newsUrl)
         .then(res => {
             if(res.status === 200) {
-                console.log('the response is ',res)
+                console.log('response for status.res',res)
                 setNews({ allNews: res.data.news.slice(0, 15)})
                 setVoteNews(3)
             } 
         })
             .catch((error) => {
-                console.log(error.response)
-                if(error.response.status === 401) {
+                console.log('error for catch block is', error.response)
+                if(error || error.response.status === 401) {
                     setError(true)
-                    console.log('status check is correct')
                 } else {
                     console.log('status check is incorrect')
+                    return null
                 }
+
+
             })
     
     }, []);
