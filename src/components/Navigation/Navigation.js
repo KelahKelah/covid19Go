@@ -44,7 +44,6 @@ const Navigation = (props) => {
               Contact
             </NavLink>
           </p>
-          {/* <p className='icon'><FaAlignJustify onClick={OpenNav} /></p> */}
       </div>
   ) : (
     <div className={styles.navContainer}>
